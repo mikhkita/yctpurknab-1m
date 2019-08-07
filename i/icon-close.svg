@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Формы" transform="translate(-838.000000, -148.000000)" fill="#CACACA">
+            <g id="Group-11" transform="translate(252.000000, 108.000000)">
+                <g id="Group-12">
+                    <g id="cancel" transform="translate(586.000000, 40.000000)">
+                        <path d="M14.4705,15.893 L0.3065,30.057 C-0.087,30.4505 -0.087,31.088 0.3065,31.4815 C0.503,31.6785 0.761,31.7765 1.0185,31.7765 C1.2765,31.7765 1.534,31.6785 1.7305,31.4815 L16.001,17.211 L30.2715,31.4815 C30.4685,31.6785 30.726,31.7765 30.9835,31.7765 C31.241,31.7765 31.499,31.6785 31.6955,31.4815 C32.089,31.088 32.089,30.4505 31.6955,30.057 L17.532,15.893 L31.705,1.719 C32.0985,1.3255 32.0985,0.688 31.705,0.2945 C31.3115,-0.0985 30.674,-0.0985 30.281,0.2945 L16.0015,14.575 L1.7205,0.295 C1.327,-0.098 0.69,-0.098 0.2965,0.295 C-0.097,0.6885 -0.097,1.326 0.2965,1.7195 L14.4705,15.893 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

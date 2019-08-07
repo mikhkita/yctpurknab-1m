@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="17px" viewBox="0 0 32 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Формы" transform="translate(-758.000000, -493.000000)" fill="#CACACA">
+            <g id="Group-11" transform="translate(252.000000, 108.000000)">
+                <g id="Group-12">
+                    <g id="Group-10" transform="translate(80.000000, 242.000000)">
+                        <g id="Group-9" transform="translate(0.000000, 110.000000)">
+                            <g id="cancel" transform="translate(426.000000, 33.000000)">
+                                <path d="M14.4705,15.893 L0.2965,1.7195 C-0.097,1.326 -0.097,0.6885 0.2965,0.295 C0.69,-0.098 1.327,-0.098 1.7205,0.295 L16.0015,14.575 L30.281,0.2945 C30.674,-0.0985 31.3115,-0.0985 31.705,0.2945 C32.0985,0.688 32.0985,1.3255 31.705,1.719 L17.532,15.893 L16.9797906,16.3683834 C16.4171706,16.852729 15.5848872,16.8526618 15.0223455,16.3682254 L14.4705,15.893 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
