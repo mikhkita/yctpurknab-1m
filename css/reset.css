@@ -1,0 +1,81 @@
+﻿/* clear */
+p, img, h1, h2, h3, h4, h5, h6, div, table, a, img, form, iframe
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+table
+{
+	border-collapse:collapse;
+}
+* :focus
+{
+	outline:none;
+}
+strong,b,h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+li{
+	list-style: none;
+}
+
+/* other */
+
+.left
+{
+	float: left !important;
+}
+.right
+{
+	float: right !important;
+}
+.bnone
+{
+	background: none !important;
+}
+.bhide
+{
+	display: none;
+}
+.tright
+{
+	text-align: right;	
+}
+.tcenter
+{
+	text-align: center;
+}
+.justify{
+	text-align: justify;
+}
+.justify:after{
+	content: '';
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+/* clearfix */	
+.clearfix:after 
+{
+	visibility: hidden;
+	display: block;
+	content: ".";
+	font-size: 0px;
+	clear: both;
+	height: 0;
+}
+* + html .clearfix { zoom: 1; } /* IE7 */
+* html .clearfix { zoom: 1; } /* IE6 */
+
+.clear
+{
+	clear:both;
+}

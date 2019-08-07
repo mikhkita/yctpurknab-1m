@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content=''>
+	<meta name="description" content=''>
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/layout.css" type="text/css">
+
+	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
+
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+</head>
+<body>
+	<ul class="ps-lines">
+		<li class="v" style="margin-left:-501px"></li>
+		<li class="v" style="margin-left:500px"></li>
+		<li class="v" ></li>
+	</ul>
+	<div class="b b-1">
+		<div class="b-block">
+			<div class="b-logo-cont left">
+				<div class="b-logo-text left blue">ФРАНШИЗА "ELECTROFROG"<br/>ОТ КРУПНЕЙШЕГО ЗАВОДА ЗАО "ЛИТМАШДЕТАЛЬ"</div>
+			</div>
+			<div class="b-date-cont right">
+				<h2 class="blue">8 (800) 555 15 24</h2>
+				<p class="right"><a href="#b-popup-1" class="b-get-callback b-orange-butt fancy goal-click" data-goal="CALLBACK_B">Заказать звонок</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="b b-2">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-3">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-4">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-5">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-6">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-7">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-8">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div class="b b-9">
+		<div class="b-block">
+			
+		</div>
+	</div>
+	<div style="display:none;">
+		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
+		<div class="b-popup" id="b-popup-1">
+			<h3>Оставьте заявку</h3>
+			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
+			<form action="kitsend.php" data-goal="CALLBACK" method="POST" id="b-form-1">
+				<div class="b-popup-form">
+					<label for="name">Введите Ваше имя</label>
+					<input type="text" id="name" name="name" required/>
+					<label for="tel">Введите Ваш номер телефона</label>
+					<input type="text" id="tel" name="phone" required/>
+					<label for="tel">Введите Ваш E-mail</label>
+					<input type="text" id="tel" name="email" required/>
+					<input type="hidden" name="subject" value="Заказ"/>
+					<input type="submit" style="display:none;">
+					<a href="#" class="b-btn b-blue-btn ajax">Заказать</a>
+					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				</div>
+			</form>
+		</div>
+		<div class="b-thanks b-popup" id="b-popup-success">
+			<h3>Спасибо!</h3>
+			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
+			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+		<div class="b-thanks b-popup" id="b-popup-error">
+			<h3>Ошибка отправки!</h3>
+			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>
+	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/KitAnimate.js"></script>
+	<script type="text/javascript" src="js/mask.js"></script>
+	<script type="text/javascript" src="js/KitSend.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
