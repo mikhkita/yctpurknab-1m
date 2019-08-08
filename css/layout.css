@@ -296,8 +296,12 @@ b, h1 b, h2 b, h3 b{
 	background-color: #F5F5F5;
 	padding: 9rem 0 11.5rem 0;
 	text-align: center;
+	background-image: url(../i/sprite.svg#m1-white);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 50.4% 75%;
 }
-.b-4:before{
+/*.b-4:before{
 	content: '';
 	position: absolute;
 	right: 0;
@@ -308,20 +312,47 @@ b, h1 b, h2 b, h3 b{
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+}*/
 	.b-4 h2{
 		margin-bottom: 60px;
 	}
 	.b-4-path{
-		margin: 8.8rem 0;
+		position: relative;
+		height: 7.6rem;
+		width: 97.7rem;
+		margin: 8.8rem auto;
 	}
+		#progress-line-back,
+		#progress-line{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+			#progress-line-move{
+				fill: none;
+    stroke: #D8232A;
+    stroke-width: 10px;
+
+/* Stroke-dasharray property */
+    stroke-dasharray: 100rem;
+    stroke-dashoffset: 100rem;
+    animation: move 3s linear infinite;
+			}
+			@keyframes move {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 
 .b-5{
 	padding: 9rem 0 10rem 0;
 	border-bottom: 0.5rem solid #F5F5F5; 
 }
-	.b-5-back{
-
+	.b-5 .b-block{
+		background-image: url(../i/sprite.svg#m1);
+	    background-position: 100% 50%;
+	    background-repeat: no-repeat;
+	    background-size: 38% 70%;
 	}
 	.b-5-content{
 		max-width: 68.3rem;
@@ -482,7 +513,7 @@ input[type=number],
 input[type=phone],
 input[type=search]{
 	width: 100%;
-	padding: 2.2rem 4rem 2.4rem 4rem;
+	padding: 2.4rem 4rem 2.5rem 4rem;
 	font-size: 2.4rem;
 	line-height: 3.2rem;
 	border: 0;
@@ -661,18 +692,18 @@ input[type=search]{
 	}
 
 .fancybox-button--close {
-    width: 5.2rem;
-    height: 5.2rem;
+    width: 5rem;
+    height: 5rem;
 	background-color: transparent;
     position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 3rem;
+    top: 3rem;
 }
 
 .fancybox-button--close:after {
     content: "\e901";
     color: #CACACA;
-    font-size: 3.2rem;
+    font-size: 3rem;
     width: auto;
     height: auto;
     background-color: transparent;

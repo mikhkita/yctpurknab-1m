@@ -87,7 +87,32 @@
 		<div class="b-block">
 			<h2>Мы размещаем уведомление  <b>в течение <span class="nowrap">3-х&nbsp;дней</span></b> с момента оплаты</h2>
 			<h3>От вас потребуется только ФИО или ИНН, <br><b>а всю остальную работу мы  <br>сделаем сами</b></h3>
-			<div class="b-4-path"></div>
+			<div class="b-4-path">
+				<!-- Фоновая линия -->
+				<svg id="progress-line-back" width="990px" height="89px" viewBox="0 0 990 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+				        <g id="Объявление-кредитора" transform="translate(-465.000000, -3231.000000)" stroke="#EAEAEA" stroke-width="10">
+				            <g id="Group-13" transform="translate(0.000000, 2719.000000)">
+				                <g id="Group-12" transform="translate(320.000000, 486.000000)">
+				                    <path d="M151.5,32.5 C277.439394,83.1666667 386.272727,108.5 478,108.5 C615.590909,108.5 676.965517,32.5 803,32.5 C887.022989,32.5 995.522989,57.8333333 1128.5,108.5" id="Line"></path>
+				                </g>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+				<!-- Основная линия -->
+				<svg id="progress-line" width="990px" height="89px" viewBox="0 0 990 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+				        <g id="Объявление-кредитора" transform="translate(-465.000000, -3231.000000)" stroke="#D8232A" stroke-width="10">
+				            <g id="Group-13" transform="translate(0.000000, 2719.000000)">
+				                <g id="Group-12" transform="translate(320.000000, 486.000000)">
+				                    <path d="M151.5,32.5 C277.439394,83.1666667 386.272727,108.5 478,108.5 C615.590909,108.5 676.965517,32.5 803,32.5 C887.022989,32.5 995.522989,57.8333333 1128.5,108.5" id="progress-line-move"></path>
+				                </g>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</div>
 			<a href="#b-popup-request" class="fancy b-btn">Опубликовать сообщение</a>
 		</div>
 	</div>
@@ -118,13 +143,13 @@
 			<h2>Остались вопросы? Укажите, как  с вами связаться и мы <b>бесплатно проконсультируем вас</b></h2>
 			<form class="b-form-consultation" method="POST" action="kitsend.php">
 				<div class="b-input">
-					<input type="text" id="name" name="name" placeholder="Ваше имя *" required="">
+					<input type="text" name="name" placeholder="Контактное лицо *" required>
 				</div>
 				<div class="b-input">
-					<input type="text" id="name" name="name" placeholder="Ваше имя *" required="">
+					<input type="text" name="phone" placeholder="Телефон">
 				</div>
 				<div class="b-input">
-					<input type="text" id="name" name="name" placeholder="Ваше имя *" required="">
+					<input type="text" name="email" placeholder="E-mail">
 				</div>
 				<a href="#" class="b-btn b-btn-submit ajax">Проконсультироваться</a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
@@ -252,7 +277,7 @@
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
-	<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>
+	<!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script> -->
 	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
