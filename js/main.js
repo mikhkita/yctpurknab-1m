@@ -41,6 +41,31 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
+    $('.select-chosen').chosen({
+        width: '100%',
+        disable_search_threshold: 10000
+    });
+
+    $('select[name="debtor"]').on('change', function(){
+        if($(this).val() == "physical"){
+            $(".b-form-request .b-input-name").show().children("input").prop({"required": true, "disabled": false});
+            $(".b-form-request .b-input-INN").hide().children("input").prop({"required": false, "disabled": true});
+        }else{
+            $(".b-form-request .b-input-name").hide().children("input").prop({"required": false, "disabled": true});
+            $(".b-form-request .b-input-INN").show().children("input").prop({"required": true, "disabled": false});
+        }
+    });
+
+    $('input[name="payment"]').on('change', function(){
+        if($(this).val() == "card"){
+            $(".b-payment-card").show();
+            $(".b-payment-account").hide();
+        }else{
+            $(".b-payment-card").hide();
+            $(".b-payment-account").show();
+        }
+    });
+
     // $(".b-step-slider").slick({
     //     dots: true,
     //     slidesToShow: 1,

@@ -103,6 +103,9 @@ $(document).ready(function(){
 	            	locked: true 
 	         	}
 	      	},
+	      	btnTpl: {
+	      		smallBtn: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Закрыть"></button>'
+	      	},
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();
@@ -191,7 +194,7 @@ $(document).ready(function(){
 			  	url: $(this).attr("action"),
 			  	data:  $this.serialize(),
 				success: function(msg){
-					var $form;
+					var $link;
 					if( msg == "1" ){
 						$link = $this.find(".b-thanks-link");
 					}else{
