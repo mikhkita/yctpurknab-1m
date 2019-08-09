@@ -66,6 +66,48 @@ $(document).ready(function(){
         }
     });
 
+    function isIE() {
+        var rv = -1;
+        if (navigator.appName == 'Microsoft Internet Explorer')
+        {
+            var ua = navigator.userAgent;
+            var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+            if (re.exec(ua) != null)
+                rv = parseFloat( RegExp.$1 );
+        }
+        else if (navigator.appName == 'Netscape')
+        {
+            var ua = navigator.userAgent;
+            var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+            if (re.exec(ua) != null)
+                rv = parseFloat( RegExp.$1 );
+        }
+        return rv == -1 ? false: true;
+    }
+
+    if( isIE ){
+        $("body").on('mousedown click', ".b-input input, .b-input textarea", function(e) {
+            $(this).parents(".b-input").addClass("focus");
+        });
+    }
+
+    $("body").on("focusin", ".b-input input, .b-input textarea", function(){
+        $(this).parents(".b-input").addClass("focus");
+    });
+
+    $("body").on("focusin", ".b-form-consultation input", function(){
+        $(".b-form-consultation .warning").removeClass("show");
+    });
+
+    $("body").on("focusout", ".b-input input, .b-input textarea", function(){
+        $(this).parents(".b-input").removeClass("focus");
+        if( $(this).val() != "" && $(this).val() != "+7 (   )    -  -  " ){
+            $(this).parents(".b-input").addClass("not-empty");
+        }else{
+            $(this).parents(".b-input").removeClass("not-empty");
+        }
+    });
+
     // $(".b-step-slider").slick({
     //     dots: true,
     //     slidesToShow: 1,
