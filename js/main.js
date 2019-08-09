@@ -108,6 +108,19 @@ $(document).ready(function(){
         }
     });
 
+    $('.show-more').on('click', function(){
+        if($(this).find(".open").hasClass("show")){
+            $(".b-2-text p").addClass("full");
+            $(this).find(".close").addClass("show");
+            $(this).find(".open").removeClass("show");
+        }else{
+            $(".b-2-text p").removeClass("full");
+            $(this).find(".close").removeClass("show");
+            $(this).find(".open").addClass("show");
+        }
+        return false;
+    });
+
     // $(".b-step-slider").slick({
     //     dots: true,
     //     slidesToShow: 1,
