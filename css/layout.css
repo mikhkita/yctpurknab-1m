@@ -237,6 +237,18 @@ b, h1 b, h2 b, h3 b{
 	}
 }
 
+@media screen and (max-width: 665px){
+	h2{
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+	}
+	h3{
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		text-align: left;
+	}
+}
+
 /* ================== Header ================== */
 
 .b-head{
@@ -336,7 +348,42 @@ b, h1 b, h2 b, h3 b{
 			.b-head-content h1{
 
 			}
+}
+
+@media screen and (max-width: 665px){
+	.b-head{
+		background-position: 51% 100%;
+    	background-size: auto 76%;
 	}
+			.b-logo{
+				width: 9rem;
+				height: 8.1rem;
+				background-image: url('../i/logo-mobile.svg');
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				margin-right: 0;
+			}
+			.b-top-text{
+				display: none;
+			}
+			.b-top-phone{
+
+			}
+				.b-top-phone a{
+					font-size: 2rem;
+    				line-height: 3.4rem;
+				}
+				.b-top-phone small{
+
+				}
+		.b-head-content{
+			padding: 7rem 0 12rem 0;
+		}
+			.b-head-content h1{
+				max-width: 27rem;
+			}
+}
 
 /* ================== b-2 ================== */
 
@@ -456,6 +503,10 @@ b, h1 b, h2 b, h3 b{
 				}
 }
 
+@media screen and (max-width: 665px){
+
+}
+
 /* ================== b-3 ================== */
 
 .b-3{
@@ -510,6 +561,10 @@ b, h1 b, h2 b, h3 b{
 					font-size: 2rem;
 					line-height: 3.2rem;
 				}
+}
+
+@media screen and (max-width: 665px){
+
 }
 
 /* ================== b-4 ================== */
@@ -746,6 +801,10 @@ b, h1 b, h2 b, h3 b{
 		}
 }
 
+@media screen and (max-width: 665px){
+
+}
+
 /* ================== b-5 ================== */
 
 .b-5{
@@ -846,6 +905,10 @@ b, h1 b, h2 b, h3 b{
 			}
 }
 
+@media screen and (max-width: 665px){
+
+}
+
 /* ================== b-6 ================== */
 
 .b-6{
@@ -935,6 +998,10 @@ b, h1 b, h2 b, h3 b{
 					.b-form-consultation .warning:after{
 						display: none;
 					}
+}
+
+@media screen and (max-width: 665px){
+
 }
 
 /* ================== b-footer ================== */
@@ -1044,6 +1111,10 @@ b, h1 b, h2 b, h3 b{
 			}
 }
 
+@media screen and (max-width: 665px){
+
+}
+
 /*======Элементы формы======*/
 
 input[type=text],
@@ -1143,6 +1214,10 @@ input[type=search]{
 		.b-input > label{
 		    left: 3.6rem;
 		}
+}
+
+@media screen and (max-width: 665px){
+
 }
 
 /* ===== type=radio ===== */
