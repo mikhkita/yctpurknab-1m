@@ -771,7 +771,7 @@ b, h1 b, h2 b, h3 b{
 		.b-5-text{
 			max-width: 42.3rem;
 			font-size: 2.4rem;
-			line-height: 3.2rem;
+			line-height: 3.6rem;
 			margin-bottom: 3.2rem;
 		}
 		.b-5-list{
@@ -866,6 +866,7 @@ b, h1 b, h2 b, h3 b{
 			margin: 0 auto;
 			text-align: center;
 			margin-top: 4rem;
+			color: #CACACA;
 		}
 			.b-form-consultation  .b-btn-submit{
 				padding: 2.5rem 3rem 2.5rem 3rem;
@@ -898,6 +899,7 @@ b, h1 b, h2 b, h3 b{
 .b-politics a,
 .b-offer a{
 	text-decoration: underline;
+	color: #CACACA;
 }
 .b-politics a:hover,
 .b-offer a:hover{
@@ -1379,7 +1381,7 @@ input[type=search]{
 }
 @media (min-width: 960px)  and (max-width: 1340px) {
 	html {
-		font-size: calc(8px + 3 * (100vw - 960px) / 380);
+		font-size: calc(7px + 3 * (100vw - 960px) / 380);
 	}
 	.b-block{
 	    width: calc( 100vw - 4.8rem );
