@@ -51,12 +51,20 @@ $(document).ready(function(){
 	});
 
 	$(".ajax").parents("form").each(function(){
-		$(this).validate({
-			rules: {
-				email: 'email',
-				phone: 'customPhone'
-			}
-		});
+		if($(this).find("input[name=phone]").length && $(this).find("input[name=phone]").prop("required")){
+			$(this).validate({
+				rules: {
+					email: 'email',
+					phone: 'customPhone'
+				}
+			});
+		}else{
+			$(this).validate({
+				rules: {
+					email: 'email'
+				}
+			});
+		}
 		if( $(this).find("input[name=phone]").length ){
 			$(this).find("input[name=phone]").each(function(){
 				var phoneMask = new IMask($(this)[0], {

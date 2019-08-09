@@ -89,19 +89,12 @@
 			<h3>От вас потребуется только ФИО или ИНН, <br><b>а всю остальную работу мы <br>сделаем сами</b></h3>
 			<div class="b-4-path">
 				<!-- Фоновая линия -->
-				<svg id="progress-line-back" width="990px" height="89px" viewBox="0 0 990 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-				        <g id="Объявление-кредитора" transform="translate(-465.000000, -3231.000000)" stroke="#EAEAEA" stroke-width="10">
-				            <g id="Group-13" transform="translate(0.000000, 2719.000000)">
-				                <g id="Group-12" transform="translate(320.000000, 486.000000)">
-				                    <path d="M151.5,32.5 C277.439394,83.1666667 386.272727,108.5 478,108.5 C615.590909,108.5 676.965517,32.5 803,32.5 C887.022989,32.5 995.522989,57.8333333 1128.5,108.5" id="Line"></path>
-				                </g>
-				            </g>
-				        </g>
-				    </g>
-				</svg>
+				<!-- <svg width="988" height="87" viewBox="0 0 988 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 5.5C5.5 5.5 194.409 81.5 332 81.5C469.591 81.5 530.966 5.5 657 5.5C783.034 5.5 982.5 81.5 982.5 81.5" stroke="#EAEAEA" stroke-width="10" stroke-linecap="round"/>
+</svg> -->
+				<img class="line-img" src="i/progress-line-back.svg">
 				<!-- Основная линия -->
-				<svg id="progress-line" width="990px" height="89px" viewBox="0 0 990 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<!-- <svg id="progress-line" width="990px" height="89px" viewBox="0 0 990 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
 				        <g id="Объявление-кредитора" transform="translate(-465.000000, -3231.000000)" stroke="#D8232A" stroke-width="10">
 				            <g id="Group-13" transform="translate(0.000000, 2719.000000)">
@@ -111,7 +104,23 @@
 				            </g>
 				        </g>
 				    </g>
-				</svg>
+				</svg> -->
+				<div class="b-checkpoint bottom" style="top: -0.5rem; left: -0.5rem;">
+					<div class="b-path-circle active"></div>
+					<div class="b-path-info">Вы <b>заполняете</b> <a href="#" class="b-path-link">форму</a><br> на публикацию уведомления</div>
+				</div>
+				<div class="b-checkpoint up" style="bottom: -1.7rem; left: 32%;">
+					<div class="b-path-circle"></div>
+					<div class="b-path-info"><b>Оплачиваете</b> услугу удобным для вас способом</div>
+				</div>
+				<div class="b-checkpoint bottom" style="top: -0.5rem; left: 65%">
+					<div class="b-path-circle"></div>
+					<div class="b-path-info"><b>Мы размещаем объявление</b> в течение 3-х рабочих дней</div>
+				</div>
+				<div class="b-checkpoint up" style="bottom: -1.7rem; left: 98%">
+					<div class="b-path-finish icon-checked"></div>
+					<div class="b-path-info"><b>Вы получаете ссылку</b> на объявление на e-mail</div>
+				</div>
 			</div>
 			<a href="#b-popup-request" class="fancy b-btn">Опубликовать сообщение</a>
 		</div>

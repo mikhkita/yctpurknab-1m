@@ -163,6 +163,9 @@ input:-moz-placeholder {
 .icon-close:before{
 	content: "\e900";
 }
+.icon-checked:before{
+	content: "\e902";
+}
 
 h1{
 	font-size: 4.5rem;
@@ -321,33 +324,36 @@ b, h1 b, h2 b, h3 b{
 	background-color: #F5F5F5;
 	padding: 9rem 0 11.5rem 0;
 	text-align: center;
-	background-image: url(../i/sprite.svg#m1-white);
+	/*background-image: url(../i/sprite.svg#m1-white);
     background-position: 100% 100%;
     background-repeat: no-repeat;
-    background-size: 50.4% 75%;
+    background-size: 50.4% 75%;*/
 }
-/*.b-4:before{
+.b-4:before{
 	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 50%;
-	height: 75%;
-	background-image: url('../i/sprite.svg#m1-white');
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 75%;
+    background-image: url(../i/sprite.svg#m1-white);
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 63.6%;
+}
 	.b-4 h2{
-		margin-bottom: 60px;
+		margin-bottom: 6rem;
 	}
 	.b-4-path{
 		position: relative;
 		height: 7.6rem;
 		width: 97.7rem;
-		margin: 8.8rem auto;
+		margin: 10.8rem auto 11.8rem auto;
 	}
-		#progress-line-back,
+		.b-4-path .line-img{
+			width: 100%;
+		}
+		/*#progress-line-back,
 		#progress-line{
 			position: absolute;
 			top: 0;
@@ -358,7 +364,6 @@ b, h1 b, h2 b, h3 b{
     stroke: #D8232A;
     stroke-width: 10px;
 
-/* Stroke-dasharray property */
     stroke-dasharray: 100rem;
     stroke-dashoffset: 100rem;
     animation: move 3s linear infinite;
@@ -367,7 +372,49 @@ b, h1 b, h2 b, h3 b{
     100% {
         stroke-dashoffset: 0;
     }
-}
+}*/
+	.b-checkpoint{
+		position: absolute;
+	}
+	.b-checkpoint.bottom .b-path-info{
+		bottom: -9.5rem;
+    	left: -13.8rem;
+	}
+	.b-checkpoint.up .b-path-info{
+		top: -9.5rem;
+    	left: -13.8rem;
+	}
+		.b-path-circle{
+			width: 2.3rem;
+			height: 2.3rem;
+			background-color: #CACACA;
+			border-radius: 2rem;
+		}
+		.b-path-circle.active{
+			background-color: #D8232A;
+		}
+		.b-path-finish:before{
+			font-size: 1.8rem;
+			line-height: 1.8rem;
+			padding: 1.4rem;
+			background-color: #26B999;
+			color: #FFF;
+			border-radius: 10rem;
+		}
+		.b-path-info{
+			position: absolute;
+			font-size: 2rem;
+			line-height: 2.8rem;
+			width: 30.2rem;
+		}
+	.b-path-link{
+		color: #D8232A;
+		font-family: 'Formular-Bold';
+		border-bottom: 0.2rem dashed #D8232A;
+	}
+	.b-path-link:hover{
+		border-bottom: 0.2rem dashed transparent;
+	}
 
 .b-5{
 	padding: 9rem 0 10rem 0;
