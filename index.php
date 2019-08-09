@@ -107,6 +107,7 @@
 </svg> -->
 				<img class="line-img" src="i/progress-line-back.svg">
 				<img class="line-img-mobile" src="i/img-line-mobile.svg">
+				<img class="line-img-mobile-375" src="i/img-line-mobile-375.svg">
 				<!-- Основная линия -->
 				<!-- <svg id="progress-line" width="990px" height="89px" viewBox="0 0 990 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -143,7 +144,7 @@
 	<div class="b b-5">
 		<div class="b-block">
 			<div class="b-5-content">
-				<h2>Услугу предоставляет юридическая <b>компания «М1»</b></h2>
+				<h2>Услугу предоставляет юридическая <b>компания <span class="b-5-company">«М1»</span></b></h2>
 				<div class="b-5-logo"></div>
 				<div class="b-5-text">Наша компания специализируется на оказании услуг по банкротству юридических и физических лиц <br><b>в Москве и регионах России</b>.</div>
 				<div class="b-5-list">
@@ -191,7 +192,7 @@
 			<div class="b-block">
 				<div class="b-footer-col">
 					<a href="/" class="b-footer-logo"></a>
-					<div class="with-icon icon-mark">127220, г.&nbsp;Москва, абонентский ящик №&nbsp;36</div>
+					<div class="address-main with-icon icon-mark">127220, г.&nbsp;Москва, абонентский ящик №&nbsp;36</div>
 				</div>
 				<div class="b-footer-col b-footer-center">
 					<div class="b-footer-text">Сервис онлайн публикации объявлений о&nbsp;намерении обратиться в арбитражный суд с&nbsp;заявлением о банкротстве</div>
@@ -202,6 +203,7 @@
 						<small>звонок бесплатный</small>
 					</div>
 					<a href="mailto:info@m1.moscow" class="with-border">info@m1.moscow</a>
+					<div class="address-mobile">127220, г.&nbsp;Москва, абонентский ящик №&nbsp;36</div>
 				</div>
 			</div>
 		</div>
