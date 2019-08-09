@@ -210,7 +210,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	h1{
 		font-size: 3.2rem;
 		line-height: 4.4rem;
@@ -316,7 +316,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-head{
 	    background-position: 34% 100%;
 	    background-size: auto 92%;
@@ -434,7 +434,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-2{
 		padding-top: 4.2rem;
 		margin-bottom: 4.2rem;
@@ -537,7 +537,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-3{
 		margin-bottom: 7rem;
 	}
@@ -685,7 +685,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-4{
 		padding: 6rem 0 8rem 0;
 		text-align: left;
@@ -830,7 +830,7 @@ b, h1 b, h2 b, h3 b{
 		.b-5-text{
 			max-width: 42.3rem;
 			font-size: 2.4rem;
-			line-height: 3.2rem;
+			line-height: 3.6rem;
 			margin-bottom: 3.2rem;
 		}
 		.b-5-list{
@@ -870,7 +870,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-5{
 		padding: 6rem 0 6rem 0;
 	}
@@ -929,6 +929,7 @@ b, h1 b, h2 b, h3 b{
 			margin: 0 auto;
 			text-align: center;
 			margin-top: 4rem;
+			color: #CACACA;
 		}
 			.b-form-consultation  .b-btn-submit{
 				padding: 2.5rem 3rem 2.5rem 3rem;
@@ -961,6 +962,7 @@ b, h1 b, h2 b, h3 b{
 .b-politics a,
 .b-offer a{
 	text-decoration: underline;
+	color: #CACACA;
 }
 .b-politics a:hover,
 .b-offer a:hover{
@@ -971,7 +973,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-6{
 		padding-top: 6rem;
 		margin-bottom: 5rem;
@@ -1078,7 +1080,7 @@ b, h1 b, h2 b, h3 b{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	.b-footer{
 
 	}
@@ -1187,7 +1189,7 @@ input[type=search]{
 
 /* ================== mobile ================== */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 960px){
 	input[type=text],
 	input[type=number],
 	input[type=phone],
@@ -1428,33 +1430,33 @@ input[type=search]{
 
 /* ================== calculate size ================== */
 
-@media screen and (max-width: 665px) {
+/*@media screen and (max-width: 665px) {
 	html {
 		font-size: calc(10px + 4 * (100vw - 375px) / 392);
 	}
 	.b-block{
 		width: calc( 100vw - 4rem );
 	}
-}
-@media screen and (min-width: 665px) and (max-width: 767px) {
+}*/
+@media screen and (min-width: 320px) and (max-width: 540px) {
 	html {
-		font-size: calc(10px + 4 * (100vw - 665px) / 392);
+		font-size: calc(10px + 2 * (100vw - 375px) / 165);
+	}
+	.b-block{
+		width: calc( 100vw - 4rem );
+	}
+}
+@media screen and (min-width: 540px) and (max-width: 960px) {
+	html {
+		font-size: calc(10px + 4 * (100vw - 667px) / 293);
 	}
 	.b-block{
 		width: calc( 100vw - 6rem );
 	}
 }
-@media screen and (min-width: 768px) and (max-width: 1080px) {
+@media (min-width: 960px)  and (max-width: 1340px) {
 	html {
-		font-size: calc(6px + 4 * (100vw - 768px) / 312);
-	}
-	.b-block{
-		width: calc( 100vw - 4.8rem );
-	}
-}
-@media (min-width: 1080px)  and (max-width: 1340px) {
-	html {
-		font-size: calc(8px + 2 * (100vw - 1024px) / 316);
+		font-size: calc(7px + 3 * (100vw - 960px) / 380);
 	}
 	.b-block{
 	    width: calc( 100vw - 4.8rem );
