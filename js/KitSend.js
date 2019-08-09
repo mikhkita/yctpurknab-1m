@@ -51,12 +51,20 @@ $(document).ready(function(){
 	});
 
 	$(".ajax").parents("form").each(function(){
-		$(this).validate({
-			rules: {
-				email: 'email',
-				phone: 'customPhone'
-			}
-		});
+		if($(this).find("input[name=phone]").length && $(this).find("input[name=phone]").prop("required")){
+			$(this).validate({
+				rules: {
+					email: 'email',
+					phone: 'customPhone'
+				}
+			});
+		}else{
+			$(this).validate({
+				rules: {
+					email: 'email'
+				}
+			});
+		}
 		if( $(this).find("input[name=phone]").length ){
 			$(this).find("input[name=phone]").each(function(){
 				var phoneMask = new IMask($(this)[0], {
@@ -189,6 +197,15 @@ $(document).ready(function(){
 				yaCounter12345678.reachGoal($this.attr("data-goal"));
 			}
 
+			if($this.hasClass("b-form-consultation")){
+				if(!$this.find("input[name='phone']").val() && !$this.find("input[name='email']").val()){
+					$(".b-form-consultation .warning").addClass("show");
+					return false;
+				}else{
+					$(".b-form-consultation .warning").removeClass("show");
+				}
+			}
+
   			$.ajax({
 			  	type: $(this).attr("method"),
 			  	url: $(this).attr("action"),
@@ -214,7 +231,7 @@ $(document).ready(function(){
 				},
 				complete: function(){
 					$this.find(".ajax").removeAttr("onclick");
-					$this.find("input[type=text],textarea").val("");
+					$this.find("input[type=text],textarea").val("").parent().removeClass("focus not-empty");
 				}
 			});
   		}else{
