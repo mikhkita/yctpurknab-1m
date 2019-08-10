@@ -224,6 +224,9 @@ $(document).ready(function(){
 					var $link;
 					if( msg == "1" ){
 						$link = $this.find(".b-thanks-link");
+						if($this.hasClass("b-form-request")){
+							$(".b-btn-popup-request").attr("href", "#b-popup-success");
+						}
 					}else{
 						$link = $(".b-error-link");
 					}

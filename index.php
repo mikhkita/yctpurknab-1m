@@ -35,7 +35,7 @@
 			</div>
 			<div class="b-head-content">
 				<h1>Опубликуйте <b>уведомление о банкротстве</b> не выходя из дома или офиса</h1>
-				<a href="#b-popup-request" class="fancy b-btn">Опубликовать сообщение</a>
+				<a href="#b-popup-request" class="fancy b-btn b-btn-popup-request">Опубликовать сообщение</a>
 			</div>
 		</div>
 	</div>
@@ -137,7 +137,7 @@
 					<div class="b-path-info"><b>Вы получаете ссылку</b> на объявление на e-mail</div>
 				</div>
 			</div>
-			<a href="#b-popup-request" class="fancy b-btn">Опубликовать сообщение</a>
+			<a href="#b-popup-request" class="fancy b-btn b-btn-popup-request">Опубликовать сообщение</a>
 		</div>
 	</div>
 
@@ -183,6 +183,7 @@
 				<a href="#" class="b-btn b-btn-submit ajax">Проконсультироваться</a>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
+				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>
 	</div>
@@ -282,6 +283,7 @@
 				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку на публикацию</a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>
 
