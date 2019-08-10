@@ -27,14 +27,14 @@
 		<div class="b-block">
 			<div class="b-head-top">
 				<a href="/" class="b-logo"></a>
-				<div class="b-top-text">Сервис онлайн публикации объявлений о намерении обратиться в суд с заявлением о банкротстве</div>
+				<div class="b-top-text">Сервис онлайн публикации объявлений о намерении обратиться в суд с заявлением о банкротстве</div>
 				<div class="b-top-phone">
 					<a href="tel:88002019968">8 (800) 201-99-68</a>
 					<small>звонок бесплатный</small>
 				</div>
 			</div>
 			<div class="b-head-content">
-				<h1>Опубликуйте <b>уведомление о банкротстве</b> не выходя из дома или офиса</h1>
+				<h1>Опубликуйте <b>уведомление о банкротстве</b> не выходя из дома или офиса</h1>
 				<a href="#b-popup-request" class="fancy b-btn">Опубликовать сообщение</a>
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 
 	<div class="b b-2">
 		<div class="b-block">
-			<h2>С 1 января 2018 года <b>стало <br>обязательным опубликование</b> о намерении обратиться с заявлением о банкротстве</h2>
+			<h2>С 1 января 2018 года <b>стало обязательным опубликование</b> о намерении обратиться <span class="desktop-nobsp">с заявлением</span> о банкротстве</h2>
 			<div class="b-2-list">
 				<div class="b-2-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#people);"></div>
@@ -55,14 +55,14 @@
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#calendar);"></div>
 					<div class="b-2-item-text">
 						<div class="question"><b>В какой срок</b> требуется опубликование?</div>
-						<p><b>Не менее чем за 15 календарных дней</b> до обращения в арбитражный суд</p>
+						<p><b>Не менее чем за 15 календарных дней</b> до обращения в арбитражный суд</p>
 					</div>
 				</div>
 				<div class="b-2-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#mace);"></div>
 					<div class="b-2-item-text">
 						<div class="question"><b>Чем грозит</b> отсутствие публикации?</div>
-						<p>Арбитражный суд <b>вернет вам заявление о банкротстве</b></p>
+						<p>Арбитражный суд <b>вернет вам <span class="mobile-nobsp">заявление о банкротстве</span></b></p>
 					</div>
 				</div>
 			</div>
@@ -82,15 +82,15 @@
 			<div class="b-3-list">
 				<div class="b-3-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#server);"></div>
-					<p>Вам <b>не придется</b> обращаться к нотариусу или оформлять специальную <b>электронную подпись</b></p>
+					<p>Вам <b>не придется</b> обращаться к нотариусу или оформлять специальную <b>электронную подпись</b></p>
 				</div>
 				<div class="b-3-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#file);"></div>
-					<p>Вы оберегаете себя <br><b>от ошибок при публикации</b>.<br> Мы гарантируем правильность и своевременность размещения</p>
+					<p>Вы оберегаете себя <b><span class="desktop-nobsp">от ошибок при</span> публикации</b>. <span class="desktop-nobsp">Мы гарантируем</span> правильность и своевременность размещения</p>
 				</div>
 				<div class="b-3-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#money);"></div>
-					<p><b>Полная стоимость</b> услуги по размещению уведомления о банкротстве составляет <b>всего&nbsp;1&nbsp;200 руб</b>.</p>
+					<p><b>Полная стоимость</b> услуги по размещению уведомления о банкротстве составляет <b>всего&nbsp;1&nbsp;200 руб</b>.</p>
 				</div>
 			</div>
 		</div>
@@ -98,8 +98,8 @@
 
 	<div class="b b-4">
 		<div class="b-block">
-			<h2>Мы размещаем уведомление <b>в течение <span class="nowrap">3-х&nbsp;дней</span></b> с момента оплаты</h2>
-			<h3>От вас потребуется только ФИО или ИНН, <br><b>а всю остальную работу мы <br>сделаем сами</b></h3>
+			<h2>Мы размещаем уведомление <b>в течение <span class="nowrap">3-х&nbsp;дней</span></b> с момента оплаты</h2>
+			<h3>От вас потребуется только ФИО или ИНН, <b>а всю остальную работу мы <br>сделаем сами</b></h3>
 			<div class="b-4-path">
 				<!-- Фоновая линия -->
 				<!-- <svg width="988" height="87" viewBox="0 0 988 87" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,11 +130,11 @@
 				</div>
 				<div class="b-checkpoint b-checkpoint-3 bottom">
 					<div class="b-path-circle"></div>
-					<div class="b-path-info"><b>Мы размещаем объявление</b> в течение 3-х рабочих дней</div>
+					<div class="b-path-info"><b>Мы размещаем объявление</b> в течение 3-х рабочих дней</div>
 				</div>
 				<div class="b-checkpoint b-checkpoint-4 up">
 					<div class="b-path-finish icon-checked"></div>
-					<div class="b-path-info"><b>Вы получаете ссылку</b> на объявление на e-mail</div>
+					<div class="b-path-info"><b>Вы получаете ссылку</b> на объявление на e-mail</div>
 				</div>
 			</div>
 			<a href="#b-popup-request" class="fancy b-btn">Опубликовать сообщение</a>
@@ -146,7 +146,7 @@
 			<div class="b-5-content">
 				<h2>Услугу предоставляет юридическая <b>компания <span class="b-5-company">«М1»</span></b></h2>
 				<div class="b-5-logo"></div>
-				<div class="b-5-text">Наша компания специализируется на оказании услуг по банкротству юридических и физических лиц <br><b>в Москве и регионах России</b>.</div>
+				<div class="b-5-text">Наша компания специализируется на оказании услуг по банкротству юридических и физических лиц <b>в Москве и регионах России</b>.</div>
 				<div class="b-5-list">
 					<div class="b-5-item">
 						<a href="tel:88002019968" class="with-icon icon-phone">8 (800) 201-99-68</a>

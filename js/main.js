@@ -1,4 +1,8 @@
 $(document).ready(function(){	
+    var isMobile = false,
+        rotation = 0,
+        prevHeight = 10000;
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -11,9 +15,26 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+
+        isMobile = myWidth < 540;
+
+        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !firstTog ){
+            firstRender();
+        }
+        prevHeight = myHeight;
+        rotation = myWidth/myHeight;
     }
+
+    function firstRender(){
+        $(".b-head").css({
+            "height" : myHeight
+        });
+    }
+
     $(window).resize(resize);
     resize();
+
+    // alert($(".b-head").height()+" "+myHeight);
 
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {

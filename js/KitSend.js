@@ -53,6 +53,7 @@ $(document).ready(function(){
 	$(".ajax").parents("form").each(function(){
 		if($(this).find("input[name=phone]").length && $(this).find("input[name=phone]").prop("required")){
 			$(this).validate({
+				onkeyup: true,
 				rules: {
 					email: 'email',
 					phone: 'customPhone'
@@ -60,6 +61,7 @@ $(document).ready(function(){
 			});
 		}else{
 			$(this).validate({
+				onkeyup: true,
 				rules: {
 					email: 'email'
 				}
@@ -89,6 +91,14 @@ $(document).ready(function(){
 		        });
 			});
 		}
+
+		$(this).find("input[type='text'], input[type='tel'], input[type='email'], textarea, select").blur(function(){
+		   $(this).valid();
+		});
+
+		$(this).find("input[type='text'], input[type='tel'], input[type='email'], textarea, select").keyup(function(){
+		   $(this).valid();
+		});
 	});
 
 	function whenScroll(){
