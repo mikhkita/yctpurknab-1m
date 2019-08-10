@@ -74,7 +74,7 @@ label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 0.3rem solid #F00 !important;
+	border: 0.3rem solid #D8232A !important;
 }
 .fancybox-inner{
 	overflow: visible !important;
@@ -1332,6 +1332,7 @@ input[type=phone],
 input[type=search]{
 	width: 100%;
 	padding: 2.1rem 4rem 2.2rem 4rem;
+	font-family: 'Formular-Regular';
 	font-size: 2.4rem;
 	line-height: 3.2rem;
 	border: 0.3rem solid #F2F2F2;
@@ -1354,7 +1355,7 @@ input[type=search]{
 	.b-input > label{
 	    position: absolute;
 	    top: calc(50% - 1.6rem);
-	    left: 4rem;
+	    left: 4.3rem;
 	    font-size: 2.4rem;
 	    line-height: 3.2rem;
 	    color: #c4c4c4;
@@ -1411,7 +1412,7 @@ input[type=search]{
 			padding: 2.7rem 3.4rem 0.8rem 3.4rem;
 		}
 		.b-input > label{
-		    left: 3.6rem;
+		    left: 3.7rem;
 		}
 }
 
@@ -1450,7 +1451,7 @@ input[type=search]{
 
 .b-radio input[type="radio"] + span + label:before,
 .b-radio input[type="radio"] + label:before {
-    top: 0;
+    top: -0.3rem;
     left: 0;
     width: 3.6rem;
     height: 3.6rem;
@@ -1474,7 +1475,7 @@ input[type=search]{
 
 .b-radio input[type="radio"] + span + label:after,
 .b-radio input[type="radio"] + label:after  {
-    top: 0.9rem;
+    top: 0.6rem;
     left: 0.9rem;
     height: 1.8rem;
     width: 1.8rem;
@@ -1496,6 +1497,7 @@ input[type=search]{
 
 .b-select{
 	position: relative;
+	font-family: 'Formular-Regular';
 }
 	.b-select .note{
 		content: "";
@@ -1508,6 +1510,7 @@ input[type=search]{
 	}
 .chosen-container-single .chosen-single{
 	position: relative;
+	font-family: 'Formular-Regular';
 	width: 100%;
 	padding: 3.4rem 4rem 1.4rem 4rem;
 	font-size: 2.4rem;
