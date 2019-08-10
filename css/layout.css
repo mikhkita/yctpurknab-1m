@@ -1279,19 +1279,50 @@ b, h1 b, h2 b, h3 b{
 				line-height: 2.2rem;
 			}
 	.b-footer-bottom{
-		padding: 4.2rem 0;
+		padding: 3rem 0 3.2rem 0;
 	}
-		.b-redder-logo{
-			display: inline-block;
-			vertical-align: top;
-			width: 10rem;
-			height: 2.2rem;
-			background-image: url('../i/redder.svg');
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-			background-size: cover;
-			margin-left: 1.7rem;
+		.b-footer-bottom-left{
+			padding-top: 1.2rem;
+			float: left;
 		}
+			.b-footer-item{
+				display: inline-block;
+				margin-right: 5rem;
+			}
+			.b-footer-bottom-left .b-footer-item:last-child,
+			.b-footer-bottom-right .b-footer-item:last-child{
+				margin-right: 0;
+			}
+		.b-footer-bottom-right{
+			float: right;
+		}
+			.b-tinkoff{
+				display: inline-block;
+				vertical-align: top;
+				width: 17rem;
+				height: 4.4rem;
+				background-image: url('../i/tinkoff.png');
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				margin-right: 4.6rem;
+			}
+			.b-redder{
+				padding-top: 1.2rem;
+				display: inline-block;
+				vertical-align: top;
+			}
+				.b-redder-logo{
+					display: inline-block;
+					vertical-align: top;
+					width: 10.2rem;
+					height: 2.2rem;
+					background-image: url('../i/redder.svg');
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					background-size: cover;
+					margin-left: 1.6rem;
+				}
 .address-mobile{
 	display: none;
 }
@@ -1320,17 +1351,34 @@ b, h1 b, h2 b, h3 b{
 		.b-footer-bottom{
 			padding: 3.2rem 0 4rem 0;
 		}
-			.b-footer-bottom .b-copyright{
-				width: 100%;
-				display: block;
-				margin-bottom: 1.2rem;
+			.b-footer-bottom-left{
+				padding-top: 0;
+				width: 56%;
 			}
-			.b-footer-bottom .b-footer-text{
-				text-align: left;
+				.b-footer-item{
+					margin-right: 0;
+				}
+				.b-footer-bottom-left .b-footer-item{
+					display: block;
+					margin-bottom: 1.2rem;
+				}
+				.b-footer-bottom-left .b-footer-item:last-child{
+					margin-bottom: 0;
+				}
+			.b-footer-bottom-right{
+				text-align: right;
+				width: 44%;
 			}
-			.b-redder-logo{
+				.b-tinkoff{
+					margin-bottom: 2.6rem;
+					background-image: url('../i/tinkoff@2x.png');
+				}
+				.b-redder{
+					padding-top: 0;
+				}
+					.b-redder-logo{
 
-			}
+					}
 }
 
 @media screen and (max-width: 540px){
@@ -1356,15 +1404,20 @@ b, h1 b, h2 b, h3 b{
 		.b-footer-bottom{
 			padding: 3.2rem 0 3.2rem 0;
 		}
-			.b-footer-bottom .b-copyright{
-				margin-bottom: 0.4rem;
+			.b-footer-bottom-left{
+				width: 100%;
 			}
-			.b-footer-bottom .b-footer-text{
-				text-align: left;
+			.b-footer-bottom-left .b-footer-item{
+				margin-bottom: 0.8rem;
 			}
-			.b-footer-bottom .b-footer-center{
-				margin-bottom: 2.4rem;
+			.b-footer-bottom-right {
+				width: 100%;
+			    position: relative;
+			    top: -1.6rem;
 			}
+				.b-tinkoff{
+					margin-bottom: 2rem;
+				}
 	.address-main{
 		display: none;
 	}
@@ -1372,6 +1425,12 @@ b, h1 b, h2 b, h3 b{
 		display: block;
 		margin-top: 1.6rem;
 		max-width: 26rem;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	.b-tinkoff{
+		background-image: url('../i/tinkoff@2x.png');
 	}
 }
 
@@ -1690,10 +1749,6 @@ input[type=search]{
 }
 .fancybox-button--close:active:after {
 
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5) {
-	
 }
 
 /* ================== calculate size ================== */

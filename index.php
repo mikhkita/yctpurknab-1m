@@ -209,8 +209,26 @@
 			</div>
 		</div>
 		<div class="b-footer-bottom">
-			<div class="b-block">
-				<div class="b-footer-col b-copyright">© ООО «М1», 2019. Все права защищены.</div>
+			<div class="b-block clearfix">
+				<div class="b-footer-bottom-left">
+					<div class="b-footer-item b-copyright">© ООО «М1», 2019. Все права защищены.</div>
+					<div class="b-footer-item">
+						<a href="politics.pdf" target="_blank" class="with-border">Политика конфиденциальности</a>
+					</div>
+					<div class="b-footer-item">
+						<a href="offer.pdf" target="_blank" class="with-border">Оферта</a>
+					</div>
+				</div>
+				<div class="b-footer-bottom-right">
+					<a href="#" class="b-footer-item b-tinkoff"></a>
+					<div class="b-footer-item b-redder">
+						<span>Разработка сайта:</span>
+						<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a>
+					</div>
+				</div>
+
+
+				<!-- <div class="b-footer-col b-copyright">© ООО «М1», 2019. Все права защищены.</div>
 				<div class="b-footer-col b-footer-center">
 					<div class="b-footer-text">
 						<a href="politics.pdf" target="_blank" class="with-border">Политика конфиденциальности</a>
@@ -219,7 +237,7 @@
 				<div class="b-footer-col">
 					<span>Разработка сайта:</span>
 					<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
