@@ -257,6 +257,8 @@ b, h1 b, h2 b, h3 b{
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100vh;
+	min-height: 600px;
 }
 .b-head-light{
 	display: none;
@@ -269,6 +271,7 @@ b, h1 b, h2 b, h3 b{
 .b-head .b-block{
 	position: relative;
 	z-index: 2;
+	height: 100vh;
 }
 	.b-head-top{
 		padding-top: 4rem;
@@ -282,13 +285,14 @@ b, h1 b, h2 b, h3 b{
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			background-size: cover;
-			margin-right: 11rem;
+			margin-right: 18.6rem;
 		}
 		.b-top-text{
 			display: inline-block;
 			vertical-align: top;
 			width: 43.1rem;
 			padding-top: 0.4rem;
+			text-align: center;
 		}
 		.b-top-phone{
 			display: inline-block;
@@ -307,7 +311,11 @@ b, h1 b, h2 b, h3 b{
 				line-height: 2.2rem;
 			}
 	.b-head-content{
-		padding: 24.4rem 0 27.1rem 0;
+		/* padding: 24.4rem 0 27.1rem 0; */
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50px);
+		margin-top: -7rem;
 	}
 		.b-head-content h1{
 
@@ -344,7 +352,7 @@ b, h1 b, h2 b, h3 b{
 
 				}
 		.b-head-content{
-			padding: 8.4rem 0 10.6rem 0;
+			/* padding: 8.4rem 0 10.6rem 0; */
 		}
 			.b-head-content h1{
 
@@ -1201,7 +1209,7 @@ b, h1 b, h2 b, h3 b{
 				padding-left: 3.6rem;
 			}
 			.b-footer-col .icon-mark:before {
-			    top: 0.2rem;
+			    top: 0rem;
 			    left: -0.3rem;
 			}
 		.b-footer-phone{
