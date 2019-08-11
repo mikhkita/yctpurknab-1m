@@ -69,11 +69,21 @@ $(document).ready(function(){
 
     $('select[name="debtor"]').on('change', function(){
         if($(this).val() == "physical"){
-            $(".b-form-request .b-input-name").show().children("input").prop({"required": true, "disabled": false});
-            $(".b-form-request .b-input-INN").hide().children("input").prop({"required": false, "disabled": true});
+            $(".b-form-request .b-input-name").show()
+                .children("input").prop({"required": true, "disabled": false}).removeClass("error");
+            $(".b-form-request .b-input-INN").hide()
+                .children("input").prop({"required": false, "disabled": true}).removeClass("error");
         }else{
-            $(".b-form-request .b-input-name").hide().children("input").prop({"required": false, "disabled": true});
-            $(".b-form-request .b-input-INN").show().children("input").prop({"required": true, "disabled": false});
+            $(".b-form-request .b-input-name").hide()
+                .children("input").prop({"required": false, "disabled": true}).removeClass("error");
+            $(".b-form-request .b-input-INN").show()
+                .children("input").prop({"required": true, "disabled": false}).removeClass("error").focus();
+            // $("input[name=INN]").val("").change();    
+            if($(this).val() == "legal"){
+                INNMask.updateOptions({mask: "0000000000"});
+            }else{
+                INNMask.updateOptions({mask: "000000000000"});
+            }
         }
     });
 
