@@ -90,7 +90,7 @@
 				</div>
 				<div class="b-3-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#money);"></div>
-					<p><b>Полная стоимость</b> услуги по размещению уведомления о банкротстве составляет <b>всего&nbsp;1&nbsp;200 руб</b>.</p>
+					<p><b>Полная стоимость</b> услуги по размещению уведомления о банкротстве составляет <b>всего&nbsp;1&nbsp;199 руб</b>.</p>
 				</div>
 			</div>
 		</div>
@@ -317,7 +317,7 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 200 руб.</a>
+				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 199 руб.</a>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer.pdf" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
