@@ -90,7 +90,7 @@
 				</div>
 				<div class="b-3-item">
 					<div class="b-illustration" style="background-image: url(i/sprite.svg#money);"></div>
-					<p><b>Полная стоимость</b> услуги по размещению уведомления о банкротстве составляет <b>всего&nbsp;1&nbsp;200 руб</b>.</p>
+					<p><b>Полная стоимость</b> услуги по размещению уведомления о банкротстве составляет <b>всего&nbsp;1&nbsp;199 руб</b>.</p>
 				</div>
 			</div>
 		</div>
@@ -317,7 +317,7 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 199 руб.</a>
+				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 199 руб.</a>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer.pdf" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
@@ -334,11 +334,12 @@
 	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 	<!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script> -->
 	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
-	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<? if( !(strpos($_SERVER['HTTP_USER_AGENT'],'MSIE')!==false || strpos($_SERVER['HTTP_USER_AGENT'],'rv:11.0')!==false) ): ?>
 		<script type="text/javascript" src="js/mask.js"></script>
+	<? else: ?>
+		<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<? endif; ?>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>

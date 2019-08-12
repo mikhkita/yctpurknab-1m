@@ -68,22 +68,28 @@ $(document).ready(function(){
     });
 
     $('select[name="debtor"]').on('change', function(){
+        var $this = $(this);
         if($(this).val() == "physical"){
-            $(".b-form-request .b-input-name").show()
-                .children("input").prop({"required": true, "disabled": false}).removeClass("error");
-            $(".b-form-request .b-input-INN").hide()
-                .children("input").prop({"required": false, "disabled": true}).removeClass("error");
+            setTimeout(function(){
+                $(".b-form-request .b-input-name").show()
+                    .children("input").prop({"required": true, "disabled": false}).removeClass("error").focus();
+                $(".b-form-request .b-input-INN").hide()
+                    .children("input").prop({"required": false, "disabled": true}).removeClass("error");
+            },10);
         }else{
-            $(".b-form-request .b-input-name").hide()
-                .children("input").prop({"required": false, "disabled": true}).removeClass("error");
-            $(".b-form-request .b-input-INN").show()
-                .children("input").prop({"required": true, "disabled": false}).removeClass("error").focus();
+            setTimeout(function(){
+                if($this.val() == "legal"){
+                    INNMask.updateOptions({mask: "0000000000"});
+                }else{
+                    INNMask.updateOptions({mask: "000000000000"});
+                }
+
+                $(".b-form-request .b-input-name").hide()
+                    .children("input").prop({"required": false, "disabled": true}).removeClass("error");
+                $(".b-form-request .b-input-INN").show()
+                    .children("input").prop({"required": true, "disabled": false}).removeClass("error").focus();
+            },10);
             // $("input[name=INN]").val("").change();    
-            if($(this).val() == "legal"){
-                INNMask.updateOptions({mask: "0000000000"});
-            }else{
-                INNMask.updateOptions({mask: "000000000000"});
-            }
         }
     });
 

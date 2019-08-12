@@ -113,13 +113,16 @@ $(document).ready(function(){
 		}
 
 		if( $(this).find("input[name=INN]").length ){
-			$(this).find("input[name=INN]").each(function(){
-				INNMask = new IMask($(this)[0], {
-		        	mask: '0000000000',
-		        	lazy: false,
-		        	placeholderChar: '_'
-		        });
-			});
+			if (typeof IMask == 'function') {
+				$(this).find("input[name=INN]").each(function(){
+					INNMask = new IMask($(this)[0], {
+			        	mask: '0000000000',
+			        	placeholderChar: ' '
+			        });
+				});
+		    } else {
+				$(this).mask("9999999999");
+			}
 		}
 
 		$(this).find("input[type='text'], input[type='tel'], input[type='email'], textarea, select").blur(function(){
@@ -127,7 +130,7 @@ $(document).ready(function(){
 		});
 
 		$(this).find("input[type='text'], input[type='tel'], input[type='email'], textarea, select").keyup(function(){
-		   $(this).valid();
+		   // $(this).valid();
 		});
 	});
 
