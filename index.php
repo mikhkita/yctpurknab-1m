@@ -122,7 +122,7 @@
 				</svg> -->
 				<div class="b-checkpoint b-checkpoint-1 bottom">
 					<div class="b-path-circle active"></div>
-					<div class="b-path-info">Вы <b>заполняете</b> <a href="#" class="b-path-link">форму</a><br> на публикацию уведомления</div>
+					<div class="b-path-info">Вы <b>заполняете</b> <a href="#b-popup-request" class="fancy b-btn-popup-request b-path-link">форму</a><br> на публикацию уведомления</div>
 				</div>
 				<div class="b-checkpoint b-checkpoint-2 up">
 					<div class="b-path-circle"></div>
@@ -146,7 +146,7 @@
 			<div class="b-5-content">
 				<h2>Услугу предоставляет юридическая <b>компания <span class="b-5-company">«М1»</span></b></h2>
 				<div class="b-5-logo"></div>
-				<div class="b-5-text">Наша компания специализируется на оказании услуг по банкротству юридических и физических лиц <b>в Москве и регионах России</b>.</div>
+				<div class="b-5-text">Наша компания специализируется на оказании услуг по банкротству юридических и физических лиц <b>в Москве и регионах России</b></div>
 				<div class="b-5-list">
 					<div class="b-5-item">
 						<a href="tel:88002019968" class="with-icon icon-phone">8 (800) 201-99-68</a>
@@ -181,8 +181,9 @@
 				</div>
 				<div class="warning">Укажите, пожалуйста, ваш телефон или e-mail</div>
 				<a href="#" class="b-btn b-btn-submit ajax">Проконсультироваться</a>
-				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				<a href="#b-popup-success-small" class="b-thanks-link fancy" style="display:none;"></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
+				<input type="hidden" name="subject" value="Новая заявка">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>
@@ -268,9 +269,9 @@
 			<form id="b-form-request" class="b-form-request" action="kitsend.php" method="POST">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
-						<option value="1">Должником 1</option>
-						<option value="2">Должником 2</option>
-						<option value="3">Должником 3</option>
+						<option>Должником 1</option>
+						<option>Должником 2</option>
+						<option>Должником 3</option>
 					</select>
 					<div class="note">Заявитель является</div>
 				</div>
@@ -317,16 +318,23 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 199 руб.</a>
+				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn ajax">Оплатить 1 199 руб.</a>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer.pdf" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
-				<a href="#" class="b-btn b-btn-submit ajax">Получить счет на оплату</a>
+				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn ajax">Получить счет на оплату</a>
 			</div>
 		</div>
+		
+		<div class="b-popup-success-small b-popup" id="b-popup-success-small">
+			<h3>Спасибо! Ваша заявка <b>успешно отправлена</b></h3>
+			<p>Наш менеджер свяжется с Вами в ближайшее время и ответит на все Ваши вопросы</p>
+			<a href="#" class="b-btn b-btn-popup-close" onclick="$.fancybox.close(); return false;">Закрыть</a>
+		</div>
+
 		<div class="b-popup-error b-popup" id="b-popup-error">
-			<h3>Ошибка отправки!</h3>
-			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+			<h3><b>Ошибка отправки</b></h3>
+			<p>Пожалуйста, попробуйте отправить Вашу заявку позже или позвоните нам по телефону: <a href="tel:88002019968"><b>8&nbsp;(800)&nbsp;201-99-68<b></a></p>
 			<a href="#" class="b-btn b-btn-popup-close" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 	</div>

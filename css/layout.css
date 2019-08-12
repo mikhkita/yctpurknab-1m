@@ -140,7 +140,8 @@ input:-moz-placeholder {
 [class^="icon-"]:before, 
 [class*=" icon-"]:before,
 .fancybox-button--close:after,
-.chosen-container-single .chosen-single:after {
+.chosen-container-single .chosen-single:after,
+.b-select:after{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -171,9 +172,9 @@ input:-moz-placeholder {
 .icon-mark:before{
 	content: "\e903";
 }
-.icon-close:before{
+/*.icon-close:before{
 	content: "\e900";
-}
+}*/
 .icon-checked:before{
 	content: "\e902";
 }
@@ -275,6 +276,21 @@ b, h1 b, h2 b, h3 b{
 	}
 	.desktop-nobsp{
 		display: inline;
+	}
+	.with-border:after,
+	.with-border:hover:after{
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: none;
+		   -moz-transform: none;
+		    -ms-transform: none;
+		   	 -o-transform: none;
+				transform: none;
+		-webkit-transition: none;
+	       -moz-transition: none;
+	        -ms-transition: none;
+	       	 -o-transition: none;
+	    		transition: none;
 	}
 }
 
@@ -542,9 +558,9 @@ b, h1 b, h2 b, h3 b{
 				color: #D8232A;
 				border-bottom: 0.1rem dashed #D8232A;
 			}
-			.show-more:hover{
+			/*.show-more:hover{
 				border-bottom: 0.1rem dashed transparent;
-			}
+			}*/
 				.show-more span{
 					display: none;
 				}
@@ -898,12 +914,10 @@ b, h1 b, h2 b, h3 b{
 				width: 30.2rem;
 			}
 		.b-path-link{
-			color: #D8232A;
-			font-family: 'Formular-Bold';
-			border-bottom: 0.2rem dashed #D8232A;
+		
 		}
 		.b-path-link:hover{
-			border-bottom: 0.2rem dashed transparent;
+			border-bottom: 0.2rem dashed #D8232A;
 		}
 }
 
@@ -1353,7 +1367,7 @@ b, h1 b, h2 b, h3 b{
 				.b-redder-logo{
 					display: inline-block;
 					vertical-align: top;
-					width: 10.2rem;
+					width: 10rem;
 					height: 2.2rem;
 					background-image: url('../i/redder.svg');
 					background-position: 50% 50%;
@@ -1479,7 +1493,8 @@ input[type=tel],
 input[type=submit],
 input[type=number],
 input[type=search],
-textarea{
+textarea,
+select{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1543,6 +1558,42 @@ input[type=search]{
 	.b-input .required{
 		color: #D8232A;
 	}
+select{
+	width: 100%;
+	padding: 3rem 7.4rem 1rem 3.4rem;
+	font-family: 'Formular-Regular';
+	font-size: 2rem;
+	line-height: 3.2rem;
+	border: 0.3rem solid #F2F2F2;
+	border-radius: 0.1rem;
+	background-color: #F2F2F2;
+	color: #000;
+	white-space: normal;
+}
+.b-select{
+	position: relative;
+	font-family: 'Formular-Regular';
+}
+	.b-select .note{
+		content: "";
+		position: absolute;
+		top: 1.1rem;
+		left: 4.1rem;
+		color: #CACACA;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+	}
+	.b-select.no-chosen:after{
+		content: "\e900";
+		position: absolute;
+	    top: 3.3rem;
+	    right: 3.3rem;
+	    font-size: 1.8rem;
+	    color: #E2E2E2;
+	}
+		.b-select.no-chosen .note{
+			left: 3.8rem;
+		}
 
 /* ================== mobile ================== */
 
@@ -1651,19 +1702,6 @@ input[type=search]{
 
 /*======chosen======*/
 
-.b-select{
-	position: relative;
-	font-family: 'Formular-Regular';
-}
-	.b-select .note{
-		content: "";
-		position: absolute;
-		top: 1.1rem;
-		left: 4.1rem;
-		color: #CACACA;
-		font-size: 1.6rem;
-		line-height: 2.4rem;
-	}
 .chosen-container-single .chosen-single{
 	position: relative;
 	font-family: 'Formular-Regular';
@@ -1690,7 +1728,7 @@ input[type=search]{
 	.chosen-container-single:hover .chosen-single:after{
 		color: #999;
 	}
-.chosen-container-active .chosen-single:after{
+.chosen-container .chosen-single:after{
 	-webkit-transition: transform 200ms ease-out;
        -moz-transition: transform 200ms ease-out;
         -ms-transition: transform 200ms ease-out;
@@ -1770,7 +1808,7 @@ input[type=search]{
 		line-height: 4.4rem;
 		margin-bottom: 5rem;
 	}
-	.b-popup-success h3,
+	.b-popup-success-small h3,
 	.b-popup-error h3{
 		margin-bottom: 3.6rem;
 	}
@@ -1804,9 +1842,14 @@ input[type=search]{
 		text-align: center;
 	}
 	.b-btn-popup-close{
-		margin-top: 3.6rem;
+		width: 100%;
+		margin: 2rem 0;
 	}
 
+
+.fancybox-slide--html {
+    padding: 0;
+}
 .fancybox-button{
 	padding: 1rem;
 }
@@ -1874,7 +1917,7 @@ input[type=search]{
 	.b-popup {
 	    margin: 2rem 0;
 	    padding: 2rem 2.4rem 2.4rem 2.4rem;
-	    max-width: calc(100% - 4rem);
+	    max-width: 100%;
 	}
 	.b-popup h3 {
 	    font-size: 2rem;
