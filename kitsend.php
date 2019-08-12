@@ -1,47 +1,46 @@
 <?php
-	echo "1";
-	// require_once("phpmail.php");
+	require_once("phpmail.php");
 
-	// $email_admin = "beatbox787@gmail.com";
-	// // $email_admin = "soc.taxi.35@gmail.com";
+	$email_admin = "beatbox787@gmail.com";
+	// $email_admin = "soc.taxi.35@gmail.com";
 
-	// $from = "“Социальное такси”";
-	// $email_from = "robot@taxi-chita.ru";
+	$from = "Юридическая компания “М1”";
+	$email_from = "robot@m1.ru";
 
-	// $deafult = array("name"=>"Имя","phone"=>"Телефон", "email"=>"E-mail");
+	$deafult = array("name"=>"Контактное лицо","phone"=>"Телефон", "email"=>"E-mail");
 
-	// $fields = array();
+	$fields = array();
 
-	// if( count($_POST) ){
+	if( count($_POST) ){
 
-	// 	foreach ($deafult  as $key => $value){
-	// 		if( isset($_POST[$key]) ){
-	// 			$fields[$value] = $_POST[$key];
-	// 		}
-	// 	}
+		foreach ($deafult  as $key => $value){
+			if( isset($_POST[$key]) ){
+				$fields[$value] = $_POST[$key];
+			}
+		}
 
-	// 	$i = 1;
-	// 	while( isset($_POST[''.$i]) ){
-	// 		$fields[$_POST[$i."-name"]] = $_POST[''.$i];
-	// 		$i++;
-	// 	}
+		$i = 1;
+		while( isset($_POST[''.$i]) ){
+			$fields[$_POST[$i."-name"]] = $_POST[''.$i];
+			$i++;
+		}
 
-	// 	$subject = $_POST["subject"];
+		$subject = $_POST["subject"];
 
-	// 	$title = "Поступила заявка с сайта ".$from.":\n";
+		$title = "Поступила заявка с сайта ".$from.":\n";
 
-	// 	$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
+		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
 
-	// 	foreach ($fields  as $key => $value){
-	// 		$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
-	// 	}
+		foreach ($fields  as $key => $value){
+			$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
+		}
 			
-	// 	$message .= "</div>";
+		$message .= "</div>";
 		
-	// 	if(send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true)){	
-	// 		echo "1";
-	// 	}else{
-	// 		echo "0";
-	// 	}
-	// }
+		if(send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true)){	
+			echo "1";
+		}else{
+			echo "0";
+		}
+	}
 ?>

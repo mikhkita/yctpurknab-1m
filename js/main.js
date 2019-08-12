@@ -18,7 +18,7 @@ $(document).ready(function(){
 
         isMobile = myWidth < 540;
 
-        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !firstTog ){
+        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 ){
             firstRender();
         }
         prevHeight = myHeight;
@@ -66,6 +66,9 @@ $(document).ready(function(){
         width: '100%',
         disable_search_threshold: 10000
     });
+    if(!$('.select-chosen').data("chosen")){
+        $('.select-chosen').parent().addClass("no-chosen");
+    }
 
     $('select[name="debtor"]').on('change', function(){
         var $this = $(this);
@@ -78,10 +81,18 @@ $(document).ready(function(){
             },10);
         }else{
             setTimeout(function(){
-                if($this.val() == "legal"){
-                    INNMask.updateOptions({mask: "0000000000"});
-                }else{
-                    INNMask.updateOptions({mask: "000000000000"});
+                if(INNMask){
+                    if($this.val() == "legal"){
+                        INNMask.updateOptions({mask: "0000000000"});
+                    }else{
+                        INNMask.updateOptions({mask: "000000000000"});
+                    }
+                }else{//для ie
+                    if($this.val() == "legal"){
+                        $("input[name=INN]").mask("9999999999");
+                    }else{
+                        $("input[name=INN]").mask("999999999999");
+                    }
                 }
 
                 $(".b-form-request .b-input-name").hide()
@@ -157,6 +168,55 @@ $(document).ready(function(){
         }
         return false;
     });
+
+    var paymentAjax = false;
+    //Оплата банковской картой
+    // $('.b-payment-card-btn').on('click', function(){
+    //     if(!paymentAjax){
+    //         paymentAjax = true;
+    //         $.ajax({
+    //             type: $(this).attr("data-method"),
+    //             url: $(this).attr("data-action"),
+    //             data: {"type" : "card"},
+    //             success: function(msg){
+    //                 var data = JSON.parse(msg);
+    //                 if(data.success){
+    //                     window.location.replace(data.url);
+    //                 }else{
+    //                     alert(data.message);
+    //                 }
+    //             },
+    //             error: function(){
+    //                 $.fancybox.close();
+    //                 $(".b-error-link").click();
+    //             },
+    //             complete: function(){
+    //                 paymentAjax = false;
+    //             }
+    //         });
+    //     }
+    // });
+    // //Оплата на расчетный счет
+    // $('.b-payment-card-btn').on('click', function(){
+    //     if(!paymentAjax){
+    //         paymentAjax = true;
+    //         $.ajax({
+    //             type: $(this).attr("data-method"),
+    //             url: $(this).attr("data-action"),
+    //             data: {"type" : "account"},
+    //             success: function(msg){
+                    
+    //             },
+    //             error: function(){
+    //                 $.fancybox.close();
+    //                 $(".b-error-link").click();
+    //             },
+    //             complete: function(){
+    //                 paymentAjax = false;
+    //             }
+    //         });
+    //     }
+    // });
 
     // $(".b-step-slider").slick({
     //     dots: true,
