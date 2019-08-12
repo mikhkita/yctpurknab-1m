@@ -18,7 +18,7 @@ $(document).ready(function(){
 
         isMobile = myWidth < 540;
 
-        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !firstTog ){
+        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 ){
             firstRender();
         }
         prevHeight = myHeight;
@@ -196,27 +196,27 @@ $(document).ready(function(){
     //         });
     //     }
     // });
-    //Оплата на расчетный счет
-    $('.b-payment-card-btn').on('click', function(){
-        if(!paymentAjax){
-            paymentAjax = true;
-            $.ajax({
-                type: $(this).attr("data-method"),
-                url: $(this).attr("data-action"),
-                data: {"type" : "account"},
-                success: function(msg){
+    // //Оплата на расчетный счет
+    // $('.b-payment-card-btn').on('click', function(){
+    //     if(!paymentAjax){
+    //         paymentAjax = true;
+    //         $.ajax({
+    //             type: $(this).attr("data-method"),
+    //             url: $(this).attr("data-action"),
+    //             data: {"type" : "account"},
+    //             success: function(msg){
                     
-                },
-                error: function(){
-                    $.fancybox.close();
-                    $(".b-error-link").click();
-                },
-                complete: function(){
-                    paymentAjax = false;
-                }
-            });
-        }
-    });
+    //             },
+    //             error: function(){
+    //                 $.fancybox.close();
+    //                 $(".b-error-link").click();
+    //             },
+    //             complete: function(){
+    //                 paymentAjax = false;
+    //             }
+    //         });
+    //     }
+    // });
 
     // $(".b-step-slider").slick({
     //     dots: true,
