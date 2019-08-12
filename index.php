@@ -216,7 +216,7 @@
 						<a href="politics.pdf" target="_blank" class="with-border">Политика конфиденциальности</a>
 					</div>
 					<div class="b-footer-item">
-						<a href="offer.pdf" target="_blank" class="with-border">Оферта</a>
+						<a href="offer_m1.docx" target="_blank" class="with-border">Оферта</a>
 					</div>
 				</div>
 				<div class="b-footer-bottom-right">
