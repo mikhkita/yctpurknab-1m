@@ -41,13 +41,27 @@ function fancyOpen(el){
 }
 
 var customHandlers = [];
+var INNMask;
 
 $(document).ready(function(){	
 	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
-		tePhone = '+7 (999) 999-99-99';
+		tePhone = '+7 (999) 999-99-99',
+		reINNLegal = /^\d{10}$/, //Юр. лицо
+		reINNEntrepreneur = /^\d{12}$/; //Физ. лицо
 
 	$.validator.addMethod('customPhone', function (value) {
 		return rePhone.test(value);
+	});
+
+	$.validator.addMethod('INN', function (value) {
+		var reg = /^.*$/;
+		if($("select[name='debtor']").val() == "legal"){
+			reg = reINNLegal;
+		}
+		if($("select[name='debtor']").val() == "entrepreneur"){
+			reg = reINNEntrepreneur;
+		}
+		return reg.test(value);
 	});
 
 	$(".ajax").parents("form").each(function(){
@@ -56,38 +70,54 @@ $(document).ready(function(){
 				onkeyup: true,
 				rules: {
 					email: 'email',
-					phone: 'customPhone'
+					phone: 'customPhone',
+					INN: 'INN'
 				}
 			});
 		}else{
 			$(this).validate({
 				onkeyup: true,
 				rules: {
-					email: 'email'
+					email: 'email',
+					INN: 'INN'
 				}
 			});
 		}
 		if( $(this).find("input[name=phone]").length ){
 			$(this).find("input[name=phone]").each(function(){
-				var phoneMask = new IMask($(this)[0], {
-		        	mask: '+{7} (000) 000-00-00',
-		        	prepare: function(value, masked){
-				    	if( value == 8 && masked._value.length == 0 ){
-				    		return "+7 (";
-				    	}
+				if (typeof IMask == 'function') {
+					var phoneMask = new IMask($(this)[0], {
+			        	mask: '+{7} (000) 000-00-00',
+			        	prepare: function(value, masked){
+					    	if( value == 8 && masked._value.length == 0 ){
+					    		return "+7 (";
+					    	}
 
-				    	if( value == 8 && masked._value == "+7 (" ){
-				    		return "";
-				    	}
+					    	if( value == 8 && masked._value == "+7 (" ){
+					    		return "";
+					    	}
 
-				    	tmp = value.match(/[\d\+]*/g);
-				    	if( tmp && tmp.length ){
-				    		value = tmp.join("");
-				    	}else{
-				    		value = "";
-				    	}
-				    	return value;
-				    }
+					    	tmp = value.match(/[\d\+]*/g);
+					    	if( tmp && tmp.length ){
+					    		value = tmp.join("");
+					    	}else{
+					    		value = "";
+					    	}
+					    	return value;
+					    }
+			        });
+			    } else {
+					$(this).mask("+7 (999) 999-99-99");
+				}
+			});
+		}
+
+		if( $(this).find("input[name=INN]").length ){
+			$(this).find("input[name=INN]").each(function(){
+				INNMask = new IMask($(this)[0], {
+		        	mask: '0000000000',
+		        	lazy: false,
+		        	placeholderChar: '_'
 		        });
 			});
 		}
