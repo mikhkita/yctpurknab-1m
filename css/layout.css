@@ -304,6 +304,9 @@ b, h1 b, h2 b, h3 b{
 		line-height: 3.2rem;
 		text-align: left;
 	}
+	.mobile-hide{
+		display: none;
+	}
 }
 
 /* ================== Header ================== */
@@ -1627,7 +1630,35 @@ select{
 }
 
 @media screen and (max-width: 540px){
-
+	input[type=text],
+	input[type=number],
+	input[type=phone],
+	input[type=search]{
+		padding: 1.7rem 2.4rem 1.8rem 2.4rem;
+	}
+	.b-input.focus input,
+	.b-input.not-empty input{
+		padding: 2.7rem 2.4rem 0.8rem 2.4rem;
+	}
+	.b-input.focus > label,
+	.b-input.not-empty > label{
+		-webkit-transform: translateY(-0.5rem);
+		   -moz-transform: translateY(-0.5rem);
+		    -ms-transform: translateY(-0.5rem);
+		   	 -o-transform: translateY(-0.5rem);
+				transform: translateY(-0.5rem);
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	.b-input > label{
+		left: 2.8rem
+	}
+	.b-select.no-chosen .note {
+	    left: 2.8rem;
+	}
+	select{
+		padding: 3rem 6rem 1rem 2.4rem;
+	}
 }
 
 /* ===== type=radio ===== */
@@ -1916,7 +1947,7 @@ select{
 @media screen and (max-width: 540px){
 	.b-popup {
 	    margin: 2rem 0;
-	    padding: 2rem 2.4rem 2.4rem 2.4rem;
+	    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
 	    max-width: 100%;
 	}
 	.b-popup h3 {
@@ -1930,7 +1961,7 @@ select{
 	    line-height: 2.8rem;
 	}
 	.b-popup .b-select, .b-popup .b-input {
-	    margin-bottom: 2.4rem;
+	    margin-bottom: 1.6rem;
 	}
 	.b-popup .b-btn-submit {
 	    margin: 3.6rem 0 3.2rem 0;
@@ -1945,11 +1976,11 @@ select{
 	.fancybox-button--close {
 	    width: 4.4rem;
 	    height: 4.4rem;
-	    right: 1.4rem;
-	    top: 1.4rem;
+	    right: 1rem;
+	    top: 1rem;
 	}
 	.fancybox-button--close:after {
-	    font-size: 2.4rem;
+	    font-size: 2rem;
 	}
 }
 

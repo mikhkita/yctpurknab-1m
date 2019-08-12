@@ -265,7 +265,7 @@
 		</div>
 
 		<div class="b-popup b-popup-request" id="b-popup-request">
-			<h3>Оформление заявки <br>на публикацию <b>уведомления о банкротстве</b></h3>
+			<h3>Оформление заявки на публикацию <b>уведомления о банкротстве</b></h3>
 			<form id="b-form-request" class="b-form-request" action="kitsend.php" method="POST">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
@@ -299,7 +299,7 @@
 					<input type="text" name="email" required="">
 					<label>Ваш e-mail <b class="required">*</b></label>
 				</div>
-				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку на публикацию</a>
+				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку<span class="mobile-hide"> на публикацию</span></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 				<input type="submit" value="Отправить" style="display:none;">
