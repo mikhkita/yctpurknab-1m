@@ -306,8 +306,8 @@
 		</div>
 
 		<div class="b-popup-success b-popup" id="b-popup-success">
-			<h3>Спасибо! Заявка на публикацию уведомления <b>успешно отправлена</b></h3>
-			<p>Для начала процедуры размещения уведомления необходимо оплатить услугу. Выберите удобный для вас способ оплаты:</p>
+			<h3>Заявка на публикацию уведомления <b>успешно отправлена</b></h3>
+			<p>Для начала процедуры размещения уведомления необходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b>  Выберите удобный для вас способ оплаты:</p>
 			<div class="b-radio">
 				<input id="payment-card" type="radio" name="payment" value="card" checked>
 				<label for="payment-card">Оплата банковской картой</label>
@@ -317,7 +317,7 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 200 руб.</a>
+				<a href="#" class="b-btn b-btn-submit ajax">Оплатить 1 199 руб.</a>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer.pdf" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
@@ -337,7 +337,9 @@
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
-	<script type="text/javascript" src="js/mask.js"></script>
+	<? if( !(strpos($_SERVER['HTTP_USER_AGENT'],'MSIE')!==false || strpos($_SERVER['HTTP_USER_AGENT'],'rv:11.0')!==false) ): ?>
+		<script type="text/javascript" src="js/mask.js"></script>
+	<? endif; ?>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
