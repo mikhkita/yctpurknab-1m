@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta name="keywords" content=''>
-	<meta name="description" content=''>
+	<title>Публикация объявления о банкротстве в Едином реестре</title>
+	<meta name="keywords" content="Федресурс объявление, объявление о банкротстве, уведомление о банкротстве, опубликование о банкротстве">
+	<meta name="description" content="Сервис онлайн публикации объявлений на федресурсе о намерении обратиться в суд с заявлением о банкротстве">
 
 	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -15,10 +15,27 @@
 	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
-	<!-- <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
-	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css"> -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://федресурс.рус/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://федресурс.рус/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://федресурс.рус/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://федресурс.рус/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://федресурс.рус/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://федресурс.рус/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://федресурс.рус/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://федресурс.рус/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Публикация объявления о банкротстве в Едином реестре"/>
+	<meta name="msapplication-TileImage" content="http://федресурс.рус/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="http://федресурс.рус/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="http://федресурс.рус/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="http://федресурс.рус/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="http://федресурс.рус/favicon/mstile-310x310.png" />
 
-	<!-- <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico"> -->
+	<link rel="icon" type="image/vnd.microsoft.icon" href="http://федресурс.рус/favicon.ico">
 </head>
 <body>
 	
@@ -245,27 +262,9 @@
 
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
-		<div class="b-popup" id="b-popup-1">
-			<h3>Оставьте заявку</h3>
-			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
-			<form action="kitsend.php" data-goal="CALLBACK" method="POST" id="b-form-1">
-				<div class="b-popup-form">
-					<label for="name">Введите Ваше имя</label>
-					<input type="text" id="name" name="name" required/>
-					<label for="tel">Введите Ваш номер телефона</label>
-					<input type="text" id="tel" name="phone" required/>
-					<label for="tel">Введите Ваш E-mail</label>
-					<input type="text" id="tel" name="email" required/>
-					<input type="hidden" name="subject" value="Заказ"/>
-					<input type="submit" style="display:none;">
-					<a href="#" class="b-btn b-blue-btn ajax">Заказать</a>
-					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
-				</div>
-			</form>
-		</div>
 
 		<div class="b-popup b-popup-request" id="b-popup-request">
-			<h3>Оформление заявки на публикацию <b>уведомления о банкротстве</b></h3>
+			<h3>Оформление заявки <span class="mobile-b">на публикацию</span><b class="mobile-hide"> уведомления о банкротстве</b></h3>
 			<form id="b-form-request" class="b-form-request" action="kitsend.php" method="POST">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
@@ -319,7 +318,7 @@
 			</div>
 			<div class="b-payment-card">
 				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn ajax">Оплатить 1 199 руб.</a>
-				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer.pdf" target="_blank">оферты</a></div>
+				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer_m1.docx" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
 				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn ajax">Получить счет на оплату</a>
@@ -328,7 +327,7 @@
 		
 		<div class="b-popup-success-small b-popup" id="b-popup-success-small">
 			<h3>Спасибо! Ваша заявка <b>успешно отправлена</b></h3>
-			<p>Наш менеджер свяжется с Вами в ближайшее время и ответит на все Ваши вопросы</p>
+			<p>Наш менеджер свяжется с Вами в ближайшее время и ответит на все Ваши вопросы</p>
 			<a href="#" class="b-btn b-btn-popup-close" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 
