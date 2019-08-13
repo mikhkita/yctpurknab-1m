@@ -99,7 +99,7 @@ textarea.error{
 	content: "";
 	display: block;
 	width: 100%;
-	border-bottom: 0.2rem solid #E2E2E2;
+	border-bottom: 2rem solid #E2E2E2;
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transform: translateY(0.8rem);
@@ -243,6 +243,7 @@ b, h1 b, h2 b, h3 b{
 @media screen and (min-width: 961px){
 	.b-btn:hover{
 		background-color: #C51F26;
+
 	}
 }
 
@@ -269,7 +270,7 @@ b, h1 b, h2 b, h3 b{
 		display: none;
 	}
 	.b-btn {
-	    padding: 2rem 3.5rem 2.2rem 3.5rem;
+	    padding: 2rem 3.5rem 2rem 3.5rem;
 	}
 	.mobile-nobsp{
 		display: inline-block;
@@ -306,6 +307,9 @@ b, h1 b, h2 b, h3 b{
 	}
 	.mobile-hide{
 		display: none;
+	}
+	.with-border:after{
+		border-bottom: 1px solid #E2E2E2;
 	}
 }
 
@@ -1226,7 +1230,7 @@ b, h1 b, h2 b, h3 b{
 				text-align: left;
 			}
 				.b-form-consultation  .b-btn-submit{
-					padding: 2.5rem 3rem 2.5rem 3rem;
+					padding: 2.2rem 3rem 2.2rem 3rem;
 					width: 100%;
 					margin-top: 1.6rem;
 				}
@@ -1356,7 +1360,7 @@ b, h1 b, h2 b, h3 b{
 				vertical-align: top;
 				width: 17rem;
 				height: 4.4rem;
-				background-image: url('../i/tinkoff.png');
+				background-image: url('../i/sprite.svg#tinkoff');
 				background-position: 50% 50%;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -1426,7 +1430,6 @@ b, h1 b, h2 b, h3 b{
 			}
 				.b-tinkoff{
 					margin-bottom: 2.6rem;
-					background-image: url('../i/tinkoff@2x.png');
 				}
 				.b-redder{
 					padding-top: 0;
@@ -1484,9 +1487,7 @@ b, h1 b, h2 b, h3 b{
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
-	.b-tinkoff{
-		background-image: url('../i/tinkoff@2x.png');
-	}
+	
 }
 
 /* ================== Страница спасибы ================== */
@@ -1690,11 +1691,11 @@ select{
 	input[type=number],
 	input[type=phone],
 	input[type=search]{
-		padding: 1.7rem 2.4rem 1.8rem 2.4rem;
+		padding: 1.5rem 2.4rem 1.7rem 2.4rem;
 	}
 	.b-input.focus input,
 	.b-input.not-empty input{
-		padding: 2.7rem 2.4rem 0.8rem 2.4rem;
+		padding: 2.6rem 2.4rem 0.6rem 2.4rem;
 	}
 	.b-input.focus > label,
 	.b-input.not-empty > label{
@@ -1711,9 +1712,16 @@ select{
 	}
 	.b-select.no-chosen .note {
 	    left: 2.8rem;
+	    top: 0.9rem;
 	}
 	select{
-		padding: 3rem 6rem 1rem 2.4rem;
+		padding: 2.6rem 6rem 0.6rem 2.4rem;
+	}
+	.mobile-b{
+		font-family: "Formular-Bold";
+	}
+	.b-select.no-chosen:after{
+		font-size: 1.4rem;
 	}
 }
 
@@ -2001,20 +2009,29 @@ select{
 }
 
 @media screen and (max-width: 540px){
+	.b-popup .b-politics,
+	.b-popup .b-offer{
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
 	.b-popup {
 	    margin: 2rem 0;
-	    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
+	    padding: 2.8rem 2.4rem 2.4rem 2.4rem;
 	    max-width: 100%;
 	}
 	.b-popup h3 {
-	    font-size: 2rem;
-    	line-height: 3rem;
+	    font-size: 2.4rem;
+    	line-height: 3.6rem;
 	    margin-bottom: 2.4rem;
-	    /*padding-right: 2.4rem;*/
+	    padding-right: 2.2rem;
+	}
+	#b-popup-success.b-popup p{
+		margin-bottom: 3.2rem;
 	}
 	.b-popup p {
 	    font-size: 1.6rem;
 	    line-height: 2.8rem;
+	    margin-bottom: 1.6rem;
 	}
 	.b-popup .b-select, .b-popup .b-input {
 	    margin-bottom: 1.6rem;
