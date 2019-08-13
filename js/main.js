@@ -171,52 +171,56 @@ $(document).ready(function(){
 
     var paymentAjax = false;
     //Оплата банковской картой
-    // $('.b-payment-card-btn').on('click', function(){
-    //     if(!paymentAjax){
-    //         paymentAjax = true;
-    //         $.ajax({
-    //             type: $(this).attr("data-method"),
-    //             url: $(this).attr("data-action"),
-    //             data: {"type" : "card"},
-    //             success: function(msg){
-    //                 var data = JSON.parse(msg);
-    //                 if(data.success){
-    //                     window.location.replace(data.url);
-    //                 }else{
-    //                     alert(data.message);
-    //                 }
-    //             },
-    //             error: function(){
-    //                 $.fancybox.close();
-    //                 $(".b-error-link").click();
-    //             },
-    //             complete: function(){
-    //                 paymentAjax = false;
-    //             }
-    //         });
-    //     }
-    // });
-    // //Оплата на расчетный счет
-    // $('.b-payment-card-btn').on('click', function(){
-    //     if(!paymentAjax){
-    //         paymentAjax = true;
-    //         $.ajax({
-    //             type: $(this).attr("data-method"),
-    //             url: $(this).attr("data-action"),
-    //             data: {"type" : "account"},
-    //             success: function(msg){
+    $('.b-payment-card-btn').on('click', function(){
+        $(this).parents("form").submit();
+        return false;
+        // if(!paymentAjax){
+        //     paymentAjax = true;
+        //     $.ajax({
+        //         type: $(this).attr("data-method"),
+        //         url: $(this).attr("data-action"),
+        //         data: {"type" : "card"},
+        //         success: function(msg){
+        //             var data = JSON.parse(msg);
+        //             if(data.success){
+        //                 window.location.replace(data.url);
+        //             }else{
+        //                 alert(data.message);
+        //             }
+        //         },
+        //         error: function(){
+        //             $.fancybox.close();
+        //             $(".b-error-link").click();
+        //         },
+        //         complete: function(){
+        //             paymentAjax = false;
+        //         }
+        //     });
+        // }
+    });
+    //Оплата на расчетный счет
+    $('.b-payment-account-btn').on('click', function(){
+        $(this).parents("form").submit();
+        return false;
+        // if(!paymentAjax){
+        //     paymentAjax = true;
+        //     $.ajax({
+        //         type: $(this).attr("data-method"),
+        //         url: $(this).attr("data-action"),
+        //         data: {"type" : "account"},
+        //         success: function(msg){
                     
-    //             },
-    //             error: function(){
-    //                 $.fancybox.close();
-    //                 $(".b-error-link").click();
-    //             },
-    //             complete: function(){
-    //                 paymentAjax = false;
-    //             }
-    //         });
-    //     }
-    // });
+        //         },
+        //         error: function(){
+        //             $.fancybox.close();
+        //             $(".b-error-link").click();
+        //         },
+        //         complete: function(){
+        //             paymentAjax = false;
+        //         }
+        //     });
+        // }
+    });
 
     // $(".b-step-slider").slick({
     //     dots: true,
