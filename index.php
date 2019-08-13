@@ -265,7 +265,7 @@
 
 		<div class="b-popup b-popup-request" id="b-popup-request">
 			<h3>Оформление заявки <span class="mobile-b">на публикацию</span><b class="mobile-hide"> уведомления о банкротстве</b></h3>
-			<form id="b-form-request" class="b-form-request" action="kitsend.php" method="POST">
+			<form id="b-form-request" class="b-form-request" action="app.php" method="POST">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
 						<option>Должником 1</option>
@@ -317,11 +317,16 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn ajax">Оплатить 1 199 руб.</a>
+				<form action="thanks.php?type=card" method="POST">
+					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn">Оплатить 1 199 руб.</a>
+				</form>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer_m1.docx" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
-				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn ajax">Получить счет на оплату</a>
+				<form action="thanks.php?type=account" method="POST">
+					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn">Получить счет на оплату</a>
+				</form>
+				<!-- <a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn ajax">Получить счет на оплату</a> -->
 			</div>
 		</div>
 		

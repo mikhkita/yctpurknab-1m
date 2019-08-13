@@ -1490,6 +1490,61 @@ b, h1 b, h2 b, h3 b{
 	
 }
 
+/* ================== Страница спасибы ================== */
+
+.b-head-thanks{
+
+}	
+	.b-head-thanks .b-head-content{
+	    margin-top: -10rem;
+	}
+		.b-head-thanks .b-head-content h1{
+			max-width: 74.4rem;
+			margin-bottom: 4rem;
+		}
+		.b-head-thanks .b-head-content .b-head-success{
+			font-size: 2.4rem;
+			line-height: 3.6rem;
+			max-width: 56.5rem;
+		}
+		.b-head-thanks .b-head-content .b-head-success.account-info{
+			max-width: 63.5rem;
+		}
+			.b-head-thanks .b-head-content h3{
+				font-size: 3.2rem;
+				line-height: 4.4rem;
+			}
+
+/* ================== tablet ================== */
+
+/* ================== mobile ================== */
+
+@media screen and (max-width: 960px){
+	h1 br{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 540px){
+	h1 br{
+		display: none;
+	}
+	.b-head-thanks .b-head-content{
+	    top: 42%;
+	}
+		.b-head-thanks .b-head-content h1{
+			margin-bottom: 3.2rem;
+		}
+		.b-head-thanks .b-head-content .b-head-success{
+			font-size: 2rem;
+			line-height: 3.2rem;
+		}
+			.b-head-thanks .b-head-content h3{
+				font-size: 2.4rem;
+				line-height: 3.6rem;
+			}
+}
+
 /*======Элементы формы======*/
 
 input[type=text],
