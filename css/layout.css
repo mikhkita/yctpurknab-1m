@@ -1510,6 +1510,7 @@ b, h1 b, h2 b, h3 b{
 			max-width: 63.5rem;
 		}
 			.b-head-thanks .b-head-content h3{
+				margin-top: 0.4rem;
 				font-size: 3.2rem;
 				line-height: 4.4rem;
 			}
