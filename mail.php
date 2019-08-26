@@ -46,9 +46,7 @@
 	}
 
 	function sendMailForClient($email_to, $subject, $title, $text){
-		$subject = !empty($subject) ? $subject : "Заявка на публикацию";
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3><p>".$text."</p></div>";
-
 		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$email_to,'UTF-8','UTF-8',$subject,$message,true);
 		return $result;
 	}
