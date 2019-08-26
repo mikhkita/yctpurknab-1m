@@ -35,9 +35,7 @@ if( count($_POST) ){
 		'email' 	=> 'E-mail'
 	);
 
-	$email_to = "beatbox787@gmail.com";
-
-	if(sendMail($email_to, $deafult, $arFields)){	
+	if(sendMail($deafult, $arFields)){	
 		echo "1";
 	}else{
 		echo "0";

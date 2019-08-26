@@ -29,8 +29,7 @@ if( isset($_GET["success"]) ){
 		$arFields['INN'] = $_SESSION['INN'];
 		$arFields['phone'] = $_SESSION['phone'];
 		$arFields['email'] = $_SESSION['email'];
-		$email_to = $_SESSION['email'];
-		sendMail($email_to, $deafult, $arFields);
+		sendMail($deafult, $arFields);
 
 		//Письмо клиенту
 		$email_to = $_SESSION['email'];

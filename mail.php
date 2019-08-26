@@ -1,11 +1,12 @@
 <?php
 	require_once("phpmail.php");
 
-	// global $from, $email_from;
+	// global $from, $email_from, $email_admin;
 	$from = "Юридическая компания “М1”";
 	$email_from = "robot@m1.ru";
+	$email_admin = "beatbox787@gmail.com";
 
-	function sendMail($email_to, $deafult, $arFields){
+	function sendMail($deafult, $arFields){
 
 		$arDebtors = array(
 			'physical' 		=> 'Физическим лицом',
@@ -39,8 +40,8 @@
 		}
 			
 		$message .= "</div>";
-		
-		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$email_to,'UTF-8','UTF-8',$subject,$message,true);
+
+		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$GLOBALS["email_admin"],'UTF-8','UTF-8',$subject,$message,true);
 		return $result;
 	}
 
