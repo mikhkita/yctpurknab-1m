@@ -117,7 +117,7 @@ $(document).ready(function(){
 			        });
 				});
 		    } else {
-				$(this).mask("9999999999");
+				$(this).find("input[name=INN]").mask("9999999999");
 			}
 		}
 
