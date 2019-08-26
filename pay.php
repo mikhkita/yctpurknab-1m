@@ -94,6 +94,7 @@ switch ($_REQUEST['type']) {
 			'phone' 	=> 'Телефон',
 			'email' 	=> 'E-mail'
 		);
+		//Письмо админу
 		$arFields = array();
 		$arFields['applicant'] = $_SESSION['applicant'];
 		$arFields['debtor'] = $_SESSION['debtor'];
@@ -101,9 +102,16 @@ switch ($_REQUEST['type']) {
 		$arFields['INN'] = $_SESSION['INN'];
 		$arFields['phone'] = $_SESSION['phone'];
 		$arFields['email'] = $_SESSION['email'];
-		$email_to = $arFields['email'];
+		$email_to = $_SESSION['email'];
 		sendMail($email_to, $deafult, $arFields);
-		
+
+		//Письмо клиенту
+		$email_to = $_SESSION['email'];
+		$subject = "Заявка на публикацию";
+		$title = "Заявка на публикацию создана";
+		$text = "Заявка на публикацию № ".$_SESSION['email']." успешно создана.";
+		sendMailForClient($email_to, $subject, $title, $text);
+
 		header("Location: /thanks/");
 		break;
 	default:

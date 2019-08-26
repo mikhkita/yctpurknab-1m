@@ -1,11 +1,11 @@
 <?php
 	require_once("phpmail.php");
-	//global $from, $email_from;
+
+	// global $from, $email_from;
+	$from = "Юридическая компания “М1”";
+	$email_from = "robot@m1.ru";
 
 	function sendMail($email_to, $deafult, $arFields){
-
-		$from = "Юридическая компания “М1”";
-		$email_from = "robot@m1.ru";
 
 		$arDebtors = array(
 			'physical' 		=> 'Физическим лицом',
@@ -30,7 +30,7 @@
 		}
 
 		$subject = isset($arFields["subject"]) ? $arFields["subject"] : "Заявка на публикацию";
-		$title = "Поступила заявка с сайта ".$from.":\n";
+		$title = "Поступила заявка с сайта ".$GLOBALS["from"].":\n";
 
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
 
@@ -39,8 +39,16 @@
 		}
 			
 		$message .= "</div>";
+		
+		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$email_to,'UTF-8','UTF-8',$subject,$message,true);
+		return $result;
+	}
 
-		$result = send_mime_mail("Сайт ".$from,$email_from,"",$email_to,'UTF-8','UTF-8',$subject,$message,true);
+	function sendMailForClient($email_to, $subject, $title, $text){
+		$subject = !empty($subject) ? $subject : "Заявка на публикацию";
+		$message = "<div><h3 style=\"color: #333;\">".$title."</h3><p>".$text."</p></div>";
+
+		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$email_to,'UTF-8','UTF-8',$subject,$message,true);
 		return $result;
 	}
 ?>
