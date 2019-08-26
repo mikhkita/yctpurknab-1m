@@ -93,10 +93,6 @@ $(document).ready(function(){
 					    		return "+7 (";
 					    	}
 
-					    	if( value == 8 && masked._value == "+7 (" ){
-					    		return "";
-					    	}
-
 					    	tmp = value.match(/[\d\+]*/g);
 					    	if( tmp && tmp.length ){
 					    		value = tmp.join("");
