@@ -304,6 +304,7 @@
 				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку<span class="mobile-hide"> на публикацию</span></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				<input type="hidden" name="subject" value="Новая заявка">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>

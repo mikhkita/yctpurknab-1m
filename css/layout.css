@@ -1533,6 +1533,7 @@ b, h1 b, h2 b, h3 b{
 			max-width: 63.5rem;
 		}
 			.b-head-thanks .b-head-content h3{
+				margin-top: 0.4rem;
 				font-size: 3.2rem;
 				line-height: 4.4rem;
 				margin-top: 0.4rem;
@@ -1681,6 +1682,7 @@ select{
 		color: #CACACA;
 		font-size: 1.6rem;
 		line-height: 2.4rem;
+		pointer-events: none;
 	}
 	.b-select.no-chosen:after{
 		content: "\e900";
@@ -1860,16 +1862,21 @@ select{
 	    right: 3.3rem;
 	    font-size: 1.8rem;
 	    color: #E2E2E2;
+	    -webkit-transform-origin: 50% 45%;
+	    -moz-transform-origin: 50% 45%;
+	    -ms-transform-origin: 50% 45%;
+	    -o-transform-origin: 50% 45%;
+	    transform-origin: 50% 45%;
 	}
 	.chosen-container-single:hover .chosen-single:after{
 		color: #999;
 	}
 .chosen-container .chosen-single:after{
-	-webkit-transition: transform 200ms ease-out;
-       -moz-transition: transform 200ms ease-out;
-        -ms-transition: transform 200ms ease-out;
-       	 -o-transition: transform 200ms ease-out;
-    		transition: transform 200ms ease-out;
+	-webkit-transition: transform 200ms ease-out, color 200ms ease-out;
+       -moz-transition: transform 200ms ease-out, color 200ms ease-out;
+        -ms-transition: transform 200ms ease-out, color 200ms ease-out;
+       	 -o-transition: transform 200ms ease-out, color 200ms ease-out;
+    		transition: transform 200ms ease-out, color 200ms ease-out;
 }
 	.chosen-container-active.chosen-with-drop .chosen-single:after{
 		-webkit-transform: rotate(180deg);
