@@ -1,43 +1,22 @@
 <?php
-	require_once("phpmail.php");
-
-	$email_admin = "beatbox787@gmail.com";
-	// $email_admin = "soc.taxi.35@gmail.com";
-
-	$from = "Юридическая компания “М1”";
-	$email_from = "robot@m1.ru";
-
-	$deafult = array("name"=>"Контактное лицо","phone"=>"Телефон", "email"=>"E-mail");
-
-	$fields = array();
+	require_once("mail.php");
 
 	if( count($_POST) ){
 
-		foreach ($deafult  as $key => $value){
-			if( isset($_POST[$key]) ){
-				$fields[$value] = $_POST[$key];
-			}
+		$deafult = array(
+			"name" => "Контактное лицо",
+			"phone" => "Телефон",
+			"email" => "E-mail"
+		);
+
+		$arFields = array();
+		foreach ($_POST as $key => $value){
+			$arFields[$key] = htmlspecialchars($value);
 		}
 
-		$i = 1;
-		while( isset($_POST[''.$i]) ){
-			$fields[$_POST[$i."-name"]] = $_POST[''.$i];
-			$i++;
-		}
+		$email_to = "rom4es.test@gmail.com";
 
-		$subject = $_POST["subject"];
-
-		$title = "Поступила заявка с сайта ".$from.":\n";
-
-		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
-
-		foreach ($fields  as $key => $value){
-			$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
-		}
-			
-		$message .= "</div>";
-		
-		if(send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true)){	
+		if(sendMail($email_to, $deafult, $arFields)){	
 			echo "1";
 		}else{
 			echo "0";

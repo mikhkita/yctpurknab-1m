@@ -1,5 +1,6 @@
 <?php
 
+require_once("mail.php");
 session_start();
 
 function getNewId(){
@@ -85,6 +86,24 @@ switch ($_REQUEST['type']) {
 		}
 		break;
 	case 'account':
+		$deafult = array(
+			'applicant' => 'Заявитель является',
+			'debtor' 	=> 'Должник является',
+			'name' 		=> 'Имя',
+			'INN' 		=> 'ИНН',
+			'phone' 	=> 'Телефон',
+			'email' 	=> 'E-mail'
+		);
+		$arFields = array();
+		$arFields['applicant'] = $_SESSION['applicant'];
+		$arFields['debtor'] = $_SESSION['debtor'];
+		$arFields['name'] = $_SESSION['name'];
+		$arFields['INN'] = $_SESSION['INN'];
+		$arFields['phone'] = $_SESSION['phone'];
+		$arFields['email'] = $_SESSION['email'];
+		$email_to = $arFields['email'];
+		sendMail($email_to, $deafult, $arFields);
+		
 		header("Location: /thanks/");
 		break;
 	default:
