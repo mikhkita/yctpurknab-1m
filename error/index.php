@@ -1,7 +1,19 @@
-<!DOCTYPE html>
+<?
+
+session_start();
+
+// if( !isset($_SESSION["id"]) ){
+// 	header("Location: /");
+// }
+
+// if( !isset($_SESSION["error"]) ){
+// 	header("Location: /thanks/");
+// }
+
+?><!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Произошла ошибка при оплате услуги</title>
 	<meta name="keywords" content=''>
 	<meta name="description" content=''>
 
@@ -9,11 +21,31 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="css/reset.css" type="text/css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
-	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
-	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
-	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="../css/reset.css" type="text/css">
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="../css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="../css/chosen.min.css" type="text/css">
+	<link rel="stylesheet" href="../css/layout.css" type="text/css">
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://федресурс.рус/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://федресурс.рус/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://федресурс.рус/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://федресурс.рус/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://федресурс.рус/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://федресурс.рус/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://федресурс.рус/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://федресурс.рус/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Публикация объявления о банкротстве в Едином реестре"/>
+	<meta name="msapplication-TileImage" content="http://федресурс.рус/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="http://федресурс.рус/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="http://федресурс.рус/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="http://федресурс.рус/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="http://федресурс.рус/favicon/mstile-310x310.png" />
 
 	<!-- <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css"> -->
@@ -34,13 +66,9 @@
 				</div>
 			</div>
 			<div class="b-head-content">
-				<?if($_REQUEST["type"] == "card"):?>
-					<h1>Оплата прошла успешно! <br>Ваша заявка <b>передана в работу</b></h1>
-					<div class="b-head-success card-info"><b>Мы в течение 3-х рабочих дней опубликуем объявление</b> о намерении обратиться в суд  с заявлением о банкротстве и отправим ссылку на объявление на Ваш e-mail: <h3 class="email-client"><?=$_SESSION['email']?></h3></div>
-				<?else:?>
-					<h1>Заявка на публикацию  <br><b>успешно отправлена</b></h1>
-					<div class="b-head-success account-info"><b>В течение одого рабочего дня</b> мы отправим договор и счет на оплату услуги по опубликованию объявления на Ваш e-mail: <h3 class="email-client"><?=$_SESSION['email']?></h3></div>
-				<?endif;?>
+				<h1>При оплате услуги <b>произошла ошибка</b></h1>
+				<div class="b-head-success card-info">Пожалуйста, попробуйте оплатить услугу повторно. Для решения проблем можете <b>позвонить нам по телефону:</b><h3 class="email-client"><a href="tel:880020199-8">8 (800) 201-99-68</a></h3></div>
+				<a href="../pay.php?type=card" class="fancy b-btn b-btn-popup-request">Оплатить <?=number_format( $_SESSION["price"], 0, ',', '&nbsp;' )?> руб.</a>
 			</div>
 		</div>
 	</div>
@@ -48,7 +76,7 @@
 	<div class="b b-6">
 		<div class="b-block">
 			<h2>Остались вопросы? Укажите, как с вами связаться и мы <b>бесплатно проконсультируем вас</b></h2>
-			<form class="b-form-consultation" method="POST" action="kitsend.php">
+			<form class="b-form-consultation" method="POST" action="/kitsend.php">
 				<div class="b-input">
 					<input type="text" name="name" required>
 					<label>Контактное лицо <b class="required">*</b></label>
@@ -178,7 +206,7 @@
 
 		<div class="b-popup-success b-popup" id="b-popup-success">
 			<h3>Заявка на публикацию уведомления <b>успешно отправлена</b></h3>
-			<p>Для начала процедуры размещения уведомления необходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b>  Выберите удобный для вас способ оплаты:</p>
+			<p>Для начала процедуры размещения уведомления необходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b> Выберите удобный для вас способ оплаты:</p>
 			<div class="b-radio">
 				<input id="payment-card" type="radio" name="payment" value="card" checked>
 				<label for="payment-card">Оплата банковской картой</label>
@@ -208,19 +236,19 @@
 			<a href="#" class="b-btn b-btn-popup-close" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.fancybox.min.js"></script>
 	<!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script> -->
-	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/KitAnimate.js"></script>
+	<script type="text/javascript" src="../js/jquery.touch.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../js/KitAnimate.js"></script>
 	<? if( !(strpos($_SERVER['HTTP_USER_AGENT'],'MSIE')!==false || strpos($_SERVER['HTTP_USER_AGENT'],'rv:11.0')!==false) ): ?>
-		<script type="text/javascript" src="js/mask.js"></script>
+		<script type="text/javascript" src="../js/mask.js"></script>
 	<? else: ?>
-		<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.maskedinput.min.js"></script>
 	<? endif; ?>
-	<script type="text/javascript" src="js/KitSend.js"></script>
-	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../js/KitSend.js"></script>
+	<script type="text/javascript" src="../js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>

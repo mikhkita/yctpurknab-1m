@@ -31,7 +31,7 @@ class TinkoffMerchantAPI
             case 'paymentUrl':
                 return $this->paymentUrl;
             case 'response':
-                return htmlentities($this->response);
+                return $this->response;
             default:
                 if ($this->response) {
                     if ($json = json_decode($this->response, true)) {

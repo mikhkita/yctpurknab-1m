@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?
+	session_start();
+	$_SESSION["price"] = 1199;
+
+?><!DOCTYPE html>
 <html>
 <head>
 	<title>Публикация объявления о банкротстве в Едином реестре</title>
@@ -189,7 +193,7 @@
 					<label>Контактное лицо <b class="required">*</b></label>
 				</div>
 				<div class="b-input">
-					<input type="text" name="phone">
+					<input type="tel" pattern="[0-9]*" name="phone">
 					<label>Телефон</label>
 				</div>
 				<div class="b-input">
@@ -268,9 +272,8 @@
 			<form id="b-form-request" class="b-form-request" action="app.php" method="POST">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
-						<option>Должником 1</option>
-						<option>Должником 2</option>
-						<option>Должником 3</option>
+						<option value="Должником">Должником</option>
+						<option value="Кредитором">Кредитором</option>
 					</select>
 					<div class="note">Заявитель является</div>
 				</div>
@@ -291,7 +294,7 @@
 					<label>ИНН должника <b class="required">*</b></label>
 				</div>
 				<div class="b-input">
-					<input type="text" name="phone" required="">
+					<input type="tel" pattern="[0-9]*" name="phone" required="">
 					<label>Ваш телефон <b class="required">*</b></label>
 				</div>
 				<div class="b-input">
@@ -307,7 +310,7 @@
 
 		<div class="b-popup-success b-popup" id="b-popup-success">
 			<h3>Заявка на публикацию уведомления <b>успешно отправлена</b></h3>
-			<p>Для начала процедуры размещения уведомления необходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b>  Выберите удобный для вас способ оплаты:</p>
+			<p>Для начала процедуры размещения уведомлениянеобходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b> Выберите удобный для вас способ оплаты:</p>
 			<div class="b-radio">
 				<input id="payment-card" type="radio" name="payment" value="card" checked>
 				<label for="payment-card">Оплата банковской картой</label>
@@ -317,13 +320,13 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<form action="thanks.php?type=card" method="POST">
+				<form action="pay.php?type=card" method="POST">
 					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn">Оплатить 1 199 руб.</a>
 				</form>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer_m1.docx" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
-				<form action="thanks.php?type=account" method="POST">
+				<form action="pay.php?type=account" method="POST">
 					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn">Получить счет на оплату</a>
 				</form>
 				<!-- <a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn ajax">Получить счет на оплату</a> -->
