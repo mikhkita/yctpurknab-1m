@@ -29,7 +29,7 @@
 			$i++;
 		}
 
-		$subject = isset($arFields["subject"]) ? $arFields["subject"] : "Новая заявка";
+		$subject = isset($arFields["subject"]) ? $arFields["subject"] : "Заявка на публикацию";
 		$title = "Поступила заявка с сайта ".$from.":\n";
 
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
