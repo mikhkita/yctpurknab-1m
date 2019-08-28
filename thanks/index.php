@@ -1,5 +1,6 @@
 <?
 
+require_once("../mail.php");
 session_start();
 
 if( isset($_GET["success"]) ){
@@ -12,6 +13,31 @@ if( isset($_GET["success"]) ){
 	}else{
 		unset($_SESSION["error"]);
 		
+		$deafult = array(
+			'applicant' => 'Заявитель является',
+			'debtor' 	=> 'Должник является',
+			'name' 		=> 'Имя',
+			'INN' 		=> 'ИНН',
+			'phone' 	=> 'Телефон',
+			'email' 	=> 'E-mail'
+		);
+		//Письмо админу
+		$arFields = array();
+		$arFields['applicant'] = $_SESSION['applicant'];
+		$arFields['debtor'] = $_SESSION['debtor'];
+		$arFields['name'] = $_SESSION['name'];
+		$arFields['INN'] = $_SESSION['INN'];
+		$arFields['phone'] = $_SESSION['phone'];
+		$arFields['email'] = $_SESSION['email'];
+		sendMail($deafult, $arFields);
+
+		//Письмо клиенту
+		$email_to = $_SESSION['email'];
+		$subject = "Заявка на публикацию";
+		$title = "Заявка на публикацию создана";
+		$text = "Заявка на публикацию № ".$_SESSION['email']." успешно создана.";
+		sendMailForClient($email_to, $subject, $title, $text);
+
 		header("Location: /thanks/");
 	}
 }
@@ -64,7 +90,6 @@ if( isset($_SESSION["error"]) ){
 	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico">
 </head>
 <body>
-	<?session_start();?>
 	<div class="b b-head b-head-thanks">
 		<div class="b-head-light"></div>
 		<div class="b-block">

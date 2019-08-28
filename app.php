@@ -1,80 +1,41 @@
 <?php
-
-require_once("phpmail.php");
+require_once("mail.php");
 
 if( count($_POST) ){
-	$applicant = htmlspecialchars($_POST["applicant"]);
-	$debtor = htmlspecialchars($_POST["debtor"]);
-	if($debtor == "physical"){
-		$name = htmlspecialchars($_POST["name"]);
+	$arFields = array();
+	$arFields['applicant'] = htmlspecialchars($_POST["applicant"]);
+	$arFields['debtor'] = htmlspecialchars($_POST["debtor"]);
+	if($arFields['debtor'] == "physical"){
+		$arFields['name'] = htmlspecialchars($_POST["name"]);
 	}else{
-		$INN = htmlspecialchars($_POST["INN"]);
+		$arFields['INN'] = htmlspecialchars($_POST["INN"]);
 	}
-	$phone = htmlspecialchars($_POST["phone"]);
-	$email = htmlspecialchars($_POST["email"]);
+	$arFields['phone'] = htmlspecialchars($_POST["phone"]);
+	$arFields['email'] = htmlspecialchars($_POST["email"]);
+	$arFields['subject'] = htmlspecialchars($_POST["subject"]);
 
 	//Сохранить данные в сессии
 	session_start();
 	unset($_SESSION['id']);
 	unset($_SESSION['error']);
 
-	$_SESSION['applicant'] = $applicant;
-	$_SESSION['debtor'] = $debtor;
-	$_SESSION['name'] = $name;
-	$_SESSION['INN'] = $INN;
-	$_SESSION['phone'] = $phone;
-	$_SESSION['email'] = $email;
+	$_SESSION['applicant'] = $arFields['applicant'];
+	$_SESSION['debtor'] = $arFields['debtor'];
+	$_SESSION['name'] = isset($arFields['name']) ? $arFields['name'] : "";
+	$_SESSION['INN'] = isset($arFields['INN']) ? $arFields['INN'] : "";
+	$_SESSION['phone'] = $arFields['phone'];
+	$_SESSION['email'] = $arFields['email'];
 
-	$email_admin = "rom4es.test@gmail.com";
-
-	$from = "Юридическая компания “М1”";
-	$email_from = "robot@m1.ru";
-
-	$arDebtors = [
-		'physical' 		=> 'Физическим лицом',
-		'legal' 		=> 'Юридическим лицом',
-		'entrepreneur' 	=> 'Индивидуальным предпринимателем'
-	];
-
-	$deafult = [
+	$deafult = array(
 		'applicant' => 'Заявитель является',
 		'debtor' 	=> 'Должник является',
 		'name' 		=> 'Имя',
 		'INN' 		=> 'ИНН',
 		'phone' 	=> 'Телефон',
 		'email' 	=> 'E-mail'
-	];
+	);
 
-	$fields = [];
-	foreach ($deafult as $key => $value){
-		if( isset($_POST[$key]) ){
-			if($key == "debtor"){
-				$fields[$value] = $arDebtors[$_POST[$key]];
-			}else{
-				$fields[$value] = $_POST[$key];
-			}
-		}
-	}
-
-	$i = 1;
-	while( isset($_POST[''.$i]) ){
-		$fields[$_POST[$i."-name"]] = $_POST[''.$i];
-		$i++;
-	}
-
-	$subject = $_POST["subject"];
-
-	$title = "Поступила заявка с сайта ".$from.":\n";
-
-	$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
-
-	foreach ($fields  as $key => $value){
-		$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
-	}
-		
-	$message .= "</div>";
-	
-	if(send_mime_mail("Сайт ".$from,$email_from,$name,$email_admin,'UTF-8','UTF-8',$subject,$message,true)){	
+	if(sendMail($deafult, $arFields)){	
 		echo "1";
 	}else{
 		echo "0";
