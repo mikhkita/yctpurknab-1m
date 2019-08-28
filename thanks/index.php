@@ -11,6 +11,7 @@ if( isset($_GET["success"]) ){
 		$_SESSION["error"] = true;
 	}else{
 		unset($_SESSION["error"]);
+		
 		header("Location: /thanks/");
 	}
 }
