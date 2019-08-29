@@ -19,27 +19,27 @@
 	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://федресурс.рус/favicon/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://федресурс.рус/favicon/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://федресурс.рус/favicon/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://федресурс.рус/favicon/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://федресурс.рус/favicon/apple-touch-icon-60x60.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://федресурс.рус/favicon/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://федресурс.рус/favicon/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://федресурс.рус/favicon/apple-touch-icon-152x152.png" />
-	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="http://федресурс.рус/favicon/favicon-128.png" sizes="128x128" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://федресурс.рус/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://федресурс.рус/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://федресурс.рус/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://федресурс.рус/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://федресурс.рус/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://федресурс.рус/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://федресурс.рус/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://федресурс.рус/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="https://федресурс.рус/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://федресурс.рус/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://федресурс.рус/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://федресурс.рус/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://федресурс.рус/favicon/favicon-128.png" sizes="128x128" />
 	<meta name="application-name" content="Публикация объявления о банкротстве в Едином реестре"/>
-	<meta name="msapplication-TileImage" content="http://федресурс.рус/favicon/mstile-144x144.png" />
-	<meta name="msapplication-square70x70logo" content="http://федресурс.рус/favicon/mstile-70x70.png" />
-	<meta name="msapplication-square150x150logo" content="http://федресурс.рус/favicon/mstile-150x150.png" />
-	<meta name="msapplication-wide310x150logo" content="http://федресурс.рус/favicon/mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="http://федресурс.рус/favicon/mstile-310x310.png" />
+	<meta name="msapplication-TileImage" content="https://федресурс.рус/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://федресурс.рус/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://федресурс.рус/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://федресурс.рус/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://федресурс.рус/favicon/mstile-310x310.png" />
 
-	<link rel="icon" type="image/vnd.microsoft.icon" href="http://федресурс.рус/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="https://федресурс.рус/favicon.ico">
 </head>
 <body>
 	
@@ -203,7 +203,7 @@
 				<div class="warning">Укажите, пожалуйста, ваш телефон или e-mail</div>
 				<a href="#" class="b-btn b-btn-submit ajax">Проконсультироваться</a>
 				<a href="#b-popup-success-small" class="b-thanks-link fancy" style="display:none;"></a>
-				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
+				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="/politics.docx" target="_blank">политикой конфиденциальности</a></div>
 				<input type="hidden" name="subject" value="Новая заявка">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
@@ -235,10 +235,10 @@
 				<div class="b-footer-bottom-left">
 					<div class="b-footer-item b-copyright">© ООО «М1», 2019. Все права защищены.</div>
 					<div class="b-footer-item">
-						<a href="politics.pdf" target="_blank" class="with-border">Политика конфиденциальности</a>
+						<a href="/politics.docx" target="_blank" class="with-border">Политика конфиденциальности</a>
 					</div>
 					<div class="b-footer-item">
-						<a href="offer_m1.docx" target="_blank" class="with-border">Оферта</a>
+						<a href="/offer_m1.docx" target="_blank" class="with-border">Оферта</a>
 					</div>
 				</div>
 				<div class="b-footer-bottom-right">
@@ -248,18 +248,6 @@
 						<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a>
 					</div>
 				</div>
-
-
-				<!-- <div class="b-footer-col b-copyright">© ООО «М1», 2019. Все права защищены.</div>
-				<div class="b-footer-col b-footer-center">
-					<div class="b-footer-text">
-						<a href="politics.pdf" target="_blank" class="with-border">Политика конфиденциальности</a>
-					</div>
-				</div>
-				<div class="b-footer-col">
-					<span>Разработка сайта:</span>
-					<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a>
-				</div> -->
 			</div>
 		</div>
 	</div>
@@ -302,7 +290,7 @@
 					<label>Ваш e-mail <b class="required">*</b></label>
 				</div>
 				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку<span class="mobile-hide"> на публикацию</span></a>
-				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="politics.pdf" target="_blank">политикой конфиденциальности</a></div>
+				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="/politics.docx" target="_blank">политикой конфиденциальности</a></div>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
 				<input type="hidden" name="subject" value="Новая заявка">
 				<input type="submit" value="Отправить" style="display:none;">
@@ -311,7 +299,7 @@
 
 		<div class="b-popup-success b-popup" id="b-popup-success">
 			<h3>Заявка на публикацию уведомления <b>успешно отправлена</b></h3>
-			<p>Для начала процедуры размещения уведомлениянеобходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b> Выберите удобный для вас способ оплаты:</p>
+			<p>Для начала процедуры размещения уведомления необходимо оплатить услугу в размере <b>1&nbsp;199&nbsp;руб.</b> Выберите удобный для вас способ оплаты:</p>
 			<div class="b-radio">
 				<input id="payment-card" type="radio" name="payment" value="card" checked>
 				<label for="payment-card">Оплата банковской картой</label>
@@ -324,7 +312,7 @@
 				<form action="pay.php?type=card" method="POST">
 					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn">Оплатить 1 199 руб.</a>
 				</form>
-				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer_m1.docx" target="_blank">оферты</a></div>
+				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="/offer_m1.docx" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
 				<form action="pay.php?type=account" method="POST">

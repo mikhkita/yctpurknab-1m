@@ -2,11 +2,11 @@
 	require_once("phpmail.php");
 
 	// global $from, $email_from, $email_admin;
-	$from = "Юридическая компания “М1”";
+	$from = "«М1» Юридическая компания";
 	$email_from = "robot@m1.ru";
-	$email_admin = "beatbox787@gmail.com";
+	$email_admin = "mike@kitaev.pro";
 
-	function sendMail($deafult, $arFields){
+	function sendMail($deafult, $arFields, $sendTelegram = false){
 
 		$arDebtors = array(
 			'physical' 		=> 'Физическим лицом',
@@ -31,7 +31,7 @@
 		}
 
 		$subject = isset($arFields["subject"]) ? $arFields["subject"] : "Заявка на публикацию";
-		$title = "Поступила заявка с сайта ".$GLOBALS["from"].":\n";
+		$title = "Поступила заявка на публикацию объявления";
 
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
 
@@ -41,7 +41,26 @@
 			
 		$message .= "</div>";
 
-		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$GLOBALS["email_admin"],'UTF-8','UTF-8',$subject,$message,true);
+		if( $sendTelegram ){
+			$messaggio = "Заявка на публикацию о банкротстве\n";
+
+			if( $_SESSION["type"] == "card" ){
+				$messaggio .= "<b>Оплачено картой</b>\n";				
+			}else{
+				$messaggio .= "<b>Оплата на расчетный счет</b>\n";
+			}
+
+			foreach ($fields as $key => $value){
+				if( $key == "Сумма" ){
+					$messaggio .= $key.": <b>".$value."</b>\n";
+				}else{
+					$messaggio .= $key.": ".$value."\n";
+				}
+			}
+			sendTelegram($messaggio);
+		}
+
+		$result = send_mime_mail($GLOBALS["from"],$GLOBALS["email_from"],"",$GLOBALS["email_admin"],'UTF-8','UTF-8',$subject,$message,true);
 		return $result;
 	}
 
@@ -49,5 +68,20 @@
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3><p>".$text."</p></div>";
 		$result = send_mime_mail("Сайт ".$GLOBALS["from"],$GLOBALS["email_from"],"",$email_to,'UTF-8','UTF-8',$subject,$message,true);
 		return $result;
+	}
+
+	function sendTelegram($messaggio) {
+		$chatID = "-1001150139270";
+	    $token = "bot949586729:AAFB5Mpt6NCUoOI31nXPPvWZ9ZEOwxHvvS4";
+	    $url = "https://api.telegram.org/" . $token . "/sendMessage?chat_id=" . $chatID;
+	    $url = $url . "&parse_mode=HTML&text=" . urlencode($messaggio);
+	    $ch = curl_init();
+	    $optArray = array(
+	            CURLOPT_URL => $url,
+	            CURLOPT_RETURNTRANSFER => true
+	    );
+	    curl_setopt_array($ch, $optArray);
+	    $result = curl_exec($ch);
+	    curl_close($ch);
 	}
 ?>

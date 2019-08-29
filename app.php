@@ -26,7 +26,10 @@ if( count($_POST) ){
 	$_SESSION['phone'] = $arFields['phone'];
 	$_SESSION['email'] = $arFields['email'];
 
+	$arFields['price'] = $_SESSION["price"]." руб.";
+
 	$deafult = array(
+		'price'		=> 'Сумма',
 		'applicant' => 'Заявитель является',
 		'debtor' 	=> 'Должник является',
 		'name' 		=> 'Имя',

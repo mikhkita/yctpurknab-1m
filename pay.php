@@ -29,23 +29,25 @@ switch ($_REQUEST['type']) {
 		$email = $_SESSION["email"];
 		$phone = $_SESSION["phone"];
 		$amount = intval($_SESSION["price"]);
-		$orderId = $_SESSION["id"];
+		$orderId = md5($_SESSION["id"].time());
+
+		$amount = 1;
 
 		$amount *= 100;
 
 		$api = new TinkoffMerchantAPI(
-		    '1565694994500DEMO',  //Ваш Terminal_Key
-		    'hqoj67omeyy7q3z5'   //Ваш Secret_Key
+		    '1565694994500', //Ваш Terminal_Key
+		    '04kt65rwy5ihggm5' //Ваш Secret_Key
 		);
 
 		$receipt = [
 		    'Email'        => $email,
 		    'Phone'        => $phone,
 		    'Taxation'     => 'usn_income',
-		    'Description'  => 'Публикация объявления о намерении обратиться в суд с заявлением о банкротстве?',
+		    'Description'  => 'Публикация объявления о намерении обратиться в суд с заявлением о банкротстве',
 		    'Items'        => [
 		        [
-		            'Name'          => 'Публикация объявления о намерении обратиться в суд с заявлением о банкротстве?',
+		            'Name'          => 'Публикация объявления о намерении обратиться в суд с заявлением о банкротстве',
 		            'Price'         => $amount,
 		            'Quantity'      => 1.0,
 		            'Amount'        => $amount,
@@ -57,7 +59,7 @@ switch ($_REQUEST['type']) {
 		];
 
 		$params = [
-		    'OrderId' => $orderId,
+		    'OrderId' => $_SESSION["id"],
 		    'Amount'  => $amount,
 		    'DATA'    => [
 		        'Phone'        => $phone,
@@ -80,13 +82,11 @@ switch ($_REQUEST['type']) {
 			}
 		}else{
 			header("Location: ".$api->paymentUrl);
-		    // var_dump($api->paymentUrl);
-		    // var_dump($api->paymentId);
-		    // var_dump($api->status);
 		}
 		break;
 	case 'account':
 		$deafult = array(
+			'price'		=> 'Сумма',
 			'applicant' => 'Заявитель является',
 			'debtor' 	=> 'Должник является',
 			'name' 		=> 'Имя',
@@ -94,21 +94,30 @@ switch ($_REQUEST['type']) {
 			'phone' 	=> 'Телефон',
 			'email' 	=> 'E-mail'
 		);
+
 		//Письмо админу
 		$arFields = array();
+		$arFields['price'] = $_SESSION["price"]." руб.";
 		$arFields['applicant'] = $_SESSION['applicant'];
 		$arFields['debtor'] = $_SESSION['debtor'];
-		$arFields['name'] = $_SESSION['name'];
-		$arFields['INN'] = $_SESSION['INN'];
+
+		if( !empty($_SESSION['name']) ){
+			$arFields['name'] = $_SESSION['name'];
+		}
+		if( !empty($_SESSION['INN']) ){
+			$arFields['INN'] = $_SESSION['INN'];
+		}
+
 		$arFields['phone'] = $_SESSION['phone'];
 		$arFields['email'] = $_SESSION['email'];
-		sendMail($deafult, $arFields);
+		$arFields['subject'] = "Оплата на расчетный счет";
+		sendMail($deafult, $arFields, true);
 
 		//Письмо клиенту
 		$email_to = $_SESSION['email'];
-		$subject = "Заявка на публикацию";
-		$title = "Заявка на публикацию создана";
-		$text = "Заявка на публикацию № ".$_SESSION['email']." успешно создана.";
+		$subject = "Заявка на публикацию объявления о банкротстве";
+		$title = "Ваша заявка на публикацию объявления № ".$_SESSION['id']." успешно создана";
+		$text = "В течение одого рабочего дня мы отправим договор и счет на оплату услуги по опубликованию объявления на Ваш e-mail";
 		sendMailForClient($email_to, $subject, $title, $text);
 
 		header("Location: /thanks/");
