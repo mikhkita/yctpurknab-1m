@@ -40,6 +40,20 @@
 	<meta name="msapplication-square310x310logo" content="http://федресурс.рус/favicon/mstile-310x310.png" />
 
 	<link rel="icon" type="image/vnd.microsoft.icon" href="http://федресурс.рус/favicon.ico">
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(55155955, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/55155955" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 	
@@ -187,7 +201,7 @@
 	<div class="b b-6">
 		<div class="b-block">
 			<h2>Остались вопросы? Укажите, как с вами связаться и мы <b>бесплатно проконсультируем вас</b></h2>
-			<form class="b-form-consultation" method="POST" action="kitsend.php">
+			<form class="b-form-consultation" method="POST" action="kitsend.php" data-goal="callback_index">
 				<div class="b-input">
 					<input type="text" name="name" required>
 					<label>Контактное лицо <b class="required">*</b></label>
@@ -269,7 +283,7 @@
 
 		<div class="b-popup b-popup-request" id="b-popup-request">
 			<h3>Оформление заявки <span class="mobile-b">на публикацию</span><b class="mobile-hide"> уведомления о банкротстве</b></h3>
-			<form id="b-form-request" class="b-form-request" action="app.php" method="POST">
+			<form id="b-form-request" class="b-form-request" action="app.php" method="POST" data-goal="callback_popup">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
 						<option value="Должником">Должником</option>
@@ -325,13 +339,13 @@
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
 			<div class="b-payment-card">
-				<form action="pay.php?type=card" method="POST">
+				<form action="pay.php?type=card" method="POST" data-goal="pay_card">
 					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn">Оплатить 1 199 руб.</a>
 				</form>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="offer_m1.docx" target="_blank">оферты</a></div>
 			</div>
 			<div class="b-payment-account" style="display: none;">
-				<form action="pay.php?type=account" method="POST">
+				<form action="pay.php?type=account" method="POST" data-goal="pay_account">
 					<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn">Получить счет на оплату</a>
 				</form>
 				<!-- <a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-account-btn ajax">Получить счет на оплату</a> -->

@@ -239,7 +239,7 @@ $(document).ready(function(){
 
 	$(".goal-click").click(function(){
 		if( $(this).attr("data-goal") )
-			yaCounter12345678.reachGoal($(this).attr("data-goal"));
+			ym(55155955, 'reachGoal', $(this).attr("data-goal"));
 	});
 
 	$(".ajax").parents("form").submit(function(){
@@ -253,10 +253,6 @@ $(document).ready(function(){
 				customHandlers[$this.attr("data-beforeAjax")]($this);
 			}
 
-			if( $this.attr("data-goal") ){
-				yaCounter12345678.reachGoal($this.attr("data-goal"));
-			}
-
 			if($this.hasClass("b-form-consultation")){
 				if(!$this.find("input[name='phone']").val() && !$this.find("input[name='email']").val()){
 					$(".b-form-consultation .warning").addClass("show");
@@ -265,6 +261,10 @@ $(document).ready(function(){
 					$(".b-form-consultation .warning").removeClass("show");
 				}
 			}
+
+			if( $this.attr("data-goal") && typeof ym != "undefined" ){
+	            ym(55155955, 'reachGoal', $(this).attr("data-goal"));
+	        }
 
   			$.ajax({
 			  	type: $(this).attr("method"),
