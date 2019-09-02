@@ -41,11 +41,12 @@ function fancyOpen(el){
 }
 
 var customHandlers = [];
-var INNMask;
+var INNMask, creditorINNMask;
 
 $(document).ready(function(){	
 	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
 		tePhone = '+7 (999) 999-99-99',
+		reINN = /^[\d+]{10,12}$/,//любой вариант ИНН
 		reINNLegal = /^\d{10}$/, //Юр. лицо
 		reINNEntrepreneur = /^\d{12}$/; //Физ. лицо
 
@@ -64,6 +65,10 @@ $(document).ready(function(){
 		return reg.test(value);
 	});
 
+	$.validator.addMethod('creditorINN', function (value) {
+		return reINN.test(value);
+	});
+
 	$(".ajax").parents("form").each(function(){
 		if($(this).find("input[name=phone]").length && $(this).find("input[name=phone]").prop("required")){
 			$(this).validate({
@@ -71,7 +76,8 @@ $(document).ready(function(){
 				rules: {
 					email: 'email',
 					phone: 'customPhone',
-					INN: 'INN'
+					INN: 'INN',
+					creditorINN: 'creditorINN'
 				}
 			});
 		}else{
@@ -79,7 +85,8 @@ $(document).ready(function(){
 				onkeyup: true,
 				rules: {
 					email: 'email',
-					INN: 'INN'
+					INN: 'INN',
+					creditorINN: 'creditorINN'
 				}
 			});
 		}
@@ -106,6 +113,19 @@ $(document).ready(function(){
 					$(this).mask("+7 (999) 999-99-99");
 				}
 			});
+		}
+
+		if( $(this).find("input[name=creditorINN]").length ){
+			if (typeof IMask == 'function') {
+				$(this).find("input[name=creditorINN]").each(function(){
+					creditorINNMask = new IMask($(this)[0], {
+			        	mask: '0000000000[00]',
+			        	placeholderChar: ' '
+			        });
+				});
+		    } else {
+				$(this).find("input[name=creditorINN]").mask("9999999999");
+			}
 		}
 
 		if( $(this).find("input[name=INN]").length ){

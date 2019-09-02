@@ -217,14 +217,17 @@ if( isset($_SESSION["error"]) ){
 
 		<div class="b-popup b-popup-request" id="b-popup-request">
 			<h3>Оформление заявки на публикацию <b>уведомления о банкротстве</b></h3>
-			<form id="b-form-request" class="b-form-request" action="kitsend.php" method="POST">
+			<form id="b-form-request" class="b-form-request" action="app.php" method="POST">
 				<div class="b-select">
 					<select name="applicant" class="select-chosen">
-						<option>Должником 1</option>
-						<option>Должником 2</option>
-						<option>Должником 3</option>
+						<option value="Должником">Должником</option>
+						<option value="Кредитором">Кредитором</option>
 					</select>
 					<div class="note">Заявитель является</div>
+				</div>
+				<div class="b-input b-input-creditor" style="display: none;">
+					<input type="text" name="creditorINN" disabled="">
+					<label>ИНН кредитора <b class="required">*</b></label>
 				</div>
 				<div class="b-select">
 					<select name="debtor" class="select-chosen">
@@ -243,7 +246,7 @@ if( isset($_SESSION["error"]) ){
 					<label>ИНН должника <b class="required">*</b></label>
 				</div>
 				<div class="b-input">
-					<input type="text" name="phone" required="">
+					<input type="tel" pattern="[0-9]*" name="phone" required="">
 					<label>Ваш телефон <b class="required">*</b></label>
 				</div>
 				<div class="b-input">
@@ -253,6 +256,7 @@ if( isset($_SESSION["error"]) ){
 				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку<span class="mobile-hide"> на публикацию</span></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="/politics.docx" target="_blank">политикой конфиденциальности</a></div>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				<input type="hidden" name="subject" value="Новая заявка">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>

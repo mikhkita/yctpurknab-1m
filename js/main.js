@@ -70,6 +70,21 @@ $(document).ready(function(){
         $('.select-chosen').parent().addClass("no-chosen");
     }
 
+    $('select[name="applicant"]').on('change', function(){
+        var $this = $(this);
+        if($(this).val() == "Кредитором"){
+            setTimeout(function(){
+                $(".b-form-request .b-input-creditor").show()
+                    .children("input").prop({"required": true, "disabled": false}).removeClass("error").focus();
+            },10);
+        }else{
+            setTimeout(function(){
+                $(".b-form-request .b-input-creditor").hide()
+                    .children("input").prop({"required": false, "disabled": true}).removeClass("error");
+            },10);
+        }
+    });
+
     $('select[name="debtor"]').on('change', function(){
         var $this = $(this);
         if($(this).val() == "physical"){
@@ -169,57 +184,15 @@ $(document).ready(function(){
         return false;
     });
 
-    var paymentAjax = false;
     //Оплата банковской картой
     $('.b-payment-card-btn').on('click', function(){
         $(this).parents("form").submit();
         return false;
-        // if(!paymentAjax){
-        //     paymentAjax = true;
-        //     $.ajax({
-        //         type: $(this).attr("data-method"),
-        //         url: $(this).attr("data-action"),
-        //         data: {"type" : "card"},
-        //         success: function(msg){
-        //             var data = JSON.parse(msg);
-        //             if(data.success){
-        //                 window.location.replace(data.url);
-        //             }else{
-        //                 alert(data.message);
-        //             }
-        //         },
-        //         error: function(){
-        //             $.fancybox.close();
-        //             $(".b-error-link").click();
-        //         },
-        //         complete: function(){
-        //             paymentAjax = false;
-        //         }
-        //     });
-        // }
     });
     //Оплата на расчетный счет
     $('.b-payment-account-btn').on('click', function(){
         $(this).parents("form").submit();
         return false;
-        // if(!paymentAjax){
-        //     paymentAjax = true;
-        //     $.ajax({
-        //         type: $(this).attr("data-method"),
-        //         url: $(this).attr("data-action"),
-        //         data: {"type" : "account"},
-        //         success: function(msg){
-                    
-        //         },
-        //         error: function(){
-        //             $.fancybox.close();
-        //             $(".b-error-link").click();
-        //         },
-        //         complete: function(){
-        //             paymentAjax = false;
-        //         }
-        //     });
-        // }
     });
 
     // $(".b-step-slider").slick({
