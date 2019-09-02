@@ -39,7 +39,7 @@
 	<meta name="msapplication-wide310x150logo" content="https://федресурс.рус/favicon/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="https://федресурс.рус/favicon/mstile-310x310.png" />
 
-	<link rel="icon" type="image/vnd.microsoft.icon" href="https://федресурс.рус/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="https://федресурс.рус/favicon.ico">
 </head>
 <body>
 	
