@@ -277,6 +277,10 @@
 					</select>
 					<div class="note">Заявитель является</div>
 				</div>
+				<div class="b-input b-input-creditor" style="display: none;">
+					<input type="text" name="creditorINN" disabled="">
+					<label>ИНН кредитора <b class="required">*</b></label>
+				</div>
 				<div class="b-select">
 					<select name="debtor" class="select-chosen">
 						<option value="physical">Физическим лицом</option>
