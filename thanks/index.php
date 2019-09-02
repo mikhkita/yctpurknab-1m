@@ -16,6 +16,7 @@ if( isset($_GET["success"]) ){
 		$deafult = array(
 			'price'		=> 'Сумма',
 			'applicant' => 'Заявитель является',
+			'creditorINN' => 'ИНН кредитора',
 			'debtor' 	=> 'Должник является',
 			'name' 		=> 'Имя',
 			'INN' 		=> 'ИНН',
@@ -26,6 +27,9 @@ if( isset($_GET["success"]) ){
 		$arFields = array();
 		$arFields['price'] = $_SESSION["price"]." руб.";
 		$arFields['applicant'] = $_SESSION['applicant'];
+		if( !empty($_SESSION['creditorINN']) ){
+			$arFields['creditorINN'] = $_SESSION['creditorINN'];
+		}
 		$arFields['debtor'] = $_SESSION['debtor'];
 
 		if( !empty($_SESSION['name']) ){

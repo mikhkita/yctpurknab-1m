@@ -4,6 +4,9 @@ require_once("mail.php");
 if( count($_POST) ){
 	$arFields = array();
 	$arFields['applicant'] = htmlspecialchars($_POST["applicant"]);
+	if(isset($_POST['creditorINN']) && !empty($_POST['creditorINN'])){
+		$arFields['creditorINN'] = htmlspecialchars($_POST["creditorINN"]);
+	}
 	$arFields['debtor'] = htmlspecialchars($_POST["debtor"]);
 	if($arFields['debtor'] == "physical"){
 		$arFields['name'] = htmlspecialchars($_POST["name"]);
@@ -20,6 +23,7 @@ if( count($_POST) ){
 	unset($_SESSION['error']);
 
 	$_SESSION['applicant'] = $arFields['applicant'];
+	$_SESSION['creditorINN'] = isset($arFields['creditorINN']) ? $arFields['creditorINN'] : "";
 	$_SESSION['debtor'] = $arFields['debtor'];
 	$_SESSION['name'] = isset($arFields['name']) ? $arFields['name'] : "";
 	$_SESSION['INN'] = isset($arFields['INN']) ? $arFields['INN'] : "";
@@ -31,6 +35,7 @@ if( count($_POST) ){
 	$deafult = array(
 		'price'		=> 'Сумма',
 		'applicant' => 'Заявитель является',
+		'creditorINN' => 'ИНН кредитора',
 		'debtor' 	=> 'Должник является',
 		'name' 		=> 'Имя',
 		'INN' 		=> 'ИНН',
