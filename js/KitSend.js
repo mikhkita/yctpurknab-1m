@@ -124,7 +124,7 @@ $(document).ready(function(){
 			        });
 				});
 		    } else {
-				$(this).find("input[name=creditorINN]").mask("9999999999");
+				$(this).find("input[name=creditorINN]").mask("9999999999?99",{placeholder:" "});
 			}
 		}
 
