@@ -186,11 +186,17 @@ $(document).ready(function(){
 
     //Оплата банковской картой
     $('.b-payment-card-btn').on('click', function(){
+        if( $this.attr("data-goal") && typeof ym != "undefined" ){
+            ym(55155955, 'reachGoal', $(this).attr("data-goal"));
+        }
         $(this).parents("form").submit();
         return false;
     });
     //Оплата на расчетный счет
     $('.b-payment-account-btn').on('click', function(){
+        if( $this.attr("data-goal") && typeof ym != "undefined" ){
+            ym(55155955, 'reachGoal', $(this).attr("data-goal"));
+        }
         $(this).parents("form").submit();
         return false;
     });
