@@ -31,7 +31,7 @@ switch ($_REQUEST['type']) {
 		$amount = intval($_SESSION["price"]);
 		$orderId = md5($_SESSION["id"].time());
 
-		$amount = 1;
+		// $amount = 1;
 
 		$amount *= 100;
 

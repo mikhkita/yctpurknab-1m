@@ -1,10 +1,8 @@
 <?php
 	require_once("phpmail.php");
 
-	// global $from, $email_from, $email_admin;
 	$from = "«М1» Юридическая компания";
 	$email_from = "robot@m1.ru";
-	$email_admin = "mike@kitaev.pro";
 
 	function sendMail($deafult, $arFields, $sendTelegram = false){
 
@@ -60,7 +58,14 @@
 			sendTelegram($messaggio);
 		}
 
-		$result = send_mime_mail($GLOBALS["from"],$GLOBALS["email_from"],"",$GLOBALS["email_admin"],'UTF-8','UTF-8',$subject,$message,true);
+		if( $sendTelegram ){
+			$email_admin = "volkov@llc-pravo.ru, mike@kitaev.pro";
+		}else{
+			$email_admin = "info@m1.moscow, mike@kitaev.pro";
+		}
+
+
+		$result = send_mime_mail($GLOBALS["from"],$GLOBALS["email_from"],"",$email_admin,'UTF-8','UTF-8',$subject,$message,true);
 		return $result;
 	}
 
