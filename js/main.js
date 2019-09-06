@@ -148,7 +148,7 @@ $(document).ready(function(){
         return rv == -1 ? false: true;
     }
 
-    if( isIE ){
+    if( isIE() ){
         $("body").on('mousedown click', ".b-input input, .b-input textarea", function(e) {
             $(this).parents(".b-input").addClass("focus");
         });
