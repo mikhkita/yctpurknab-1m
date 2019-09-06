@@ -76,13 +76,13 @@ if( !isset($_SESSION["error"]) ){
 	<div class="b b-6">
 		<div class="b-block">
 			<h2>Остались вопросы? Укажите, как с вами связаться и мы <b>бесплатно проконсультируем вас</b></h2>
-			<form class="b-form-consultation" method="POST" action="/kitsend.php">
+			<form class="b-form-consultation" method="POST" action="kitsend.php" data-goal="callback_index">
 				<div class="b-input">
 					<input type="text" name="name" required>
 					<label>Контактное лицо <b class="required">*</b></label>
 				</div>
 				<div class="b-input">
-					<input type="text" name="phone">
+					<input type="tel" pattern="[0-9]*" name="phone">
 					<label>Телефон</label>
 				</div>
 				<div class="b-input">
@@ -93,7 +93,7 @@ if( !isset($_SESSION["error"]) ){
 				<a href="#" class="b-btn b-btn-submit ajax">Проконсультироваться</a>
 				<a href="#b-popup-success-small" class="b-thanks-link fancy" style="display:none;"></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="/politics.docx" target="_blank">политикой конфиденциальности</a></div>
-				<input type="hidden" name="subject" value="Новая заявка">
+				<input type="hidden" name="subject" value="Заявка на обратный звонок">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>
@@ -236,6 +236,23 @@ if( !isset($_SESSION["error"]) ){
 			<a href="#" class="b-btn b-btn-popup-close" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 	</div>
+	
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(55155955, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true,
+	        webvisor:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/55155955" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.fancybox.min.js"></script>
 	<!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script> -->

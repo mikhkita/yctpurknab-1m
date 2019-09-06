@@ -2,6 +2,8 @@
 	session_start();
 	$_SESSION["price"] = 1199;
 
+	$version = 1;
+
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +19,7 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
-	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="css/layout.css?<?=$version?>" type="text/css">
 
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://федресурс.рус/favicon/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://федресурс.рус/favicon/apple-touch-icon-114x114.png" />
@@ -40,21 +42,6 @@
 	<meta name="msapplication-square310x310logo" content="https://федресурс.рус/favicon/mstile-310x310.png" />
 
 	<link rel="icon" type="image/x-icon" href="https://федресурс.рус/favicon.ico">
-	
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-	   ym(55155955, "init", {
-	        clickmap:true,
-	        trackLinks:true,
-	        accurateTrackBounce:true
-	   });
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/55155955" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 	
@@ -219,7 +206,7 @@
 				<a href="#" class="b-btn b-btn-submit ajax">Проконсультироваться</a>
 				<a href="#b-popup-success-small" class="b-thanks-link fancy" style="display:none;"></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="/politics.docx" target="_blank">политикой конфиденциальности</a></div>
-				<input type="hidden" name="subject" value="Новая заявка">
+				<input type="hidden" name="subject" value="Заявка на обратный звонок">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>
@@ -311,7 +298,7 @@
 				<a href="#" class="b-btn b-btn-submit ajax">Отправить заявку<span class="mobile-hide"> на публикацию</span></a>
 				<div class="b-politics">Отправляя форму, я даю согласие на обработку моих персональных данных в соответствии с <a href="/politics.docx" target="_blank">политикой конфиденциальности</a></div>
 				<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
-				<input type="hidden" name="subject" value="Новая заявка">
+				<input type="hidden" name="subject" value="Заявка на публикацию">
 				<input type="submit" value="Отправить" style="display:none;">
 			</form>
 		</div>
@@ -353,6 +340,22 @@
 			<a href="#" class="b-btn b-btn-popup-close" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 	</div>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(55155955, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true,
+	        webvisor:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/55155955" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 	<!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script> -->
@@ -364,8 +367,8 @@
 	<? else: ?>
 		<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<? endif; ?>
-	<script type="text/javascript" src="js/KitSend.js"></script>
+	<script type="text/javascript" src="js/KitSend.js?<?=$version?>"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js?<?=$version?>"></script>
 </body>
 </html>

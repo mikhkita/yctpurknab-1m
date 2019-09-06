@@ -14,7 +14,7 @@
 			$arFields[$key] = htmlspecialchars($value);
 		}
 
-		if(sendMail($deafult, $arFields)){	
+		if(sendMail($deafult, $arFields, "Поступила заявка на обратный звонок", true)){	
 			echo "1";
 		}else{
 			echo "0";

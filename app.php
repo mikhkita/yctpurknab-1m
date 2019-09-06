@@ -43,7 +43,7 @@ if( count($_POST) ){
 		'email' 	=> 'E-mail'
 	);
 
-	if(sendMail($deafult, $arFields)){	
+	if(sendMail($deafult, $arFields, "Поступила заявка на публикацию объявления")){	
 		echo "1";
 	}else{
 		echo "0";
