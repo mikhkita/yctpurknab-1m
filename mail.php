@@ -4,7 +4,7 @@
 	$from = "«М1» Юридическая компания";
 	$email_from = "robot@m1.ru";
 
-	function sendMail($deafult, $arFields, $sendTelegram = false){
+	function sendMail($deafult, $arFields, $title, $sendTelegram = false){
 
 		$arDebtors = array(
 			'physical' 		=> 'Физическим лицом',
@@ -29,7 +29,6 @@
 		}
 
 		$subject = isset($arFields["subject"]) ? $arFields["subject"] : "Заявка на публикацию";
-		$title = "Поступила заявка на публикацию объявления";
 
 		$message = "<div><h3 style=\"color: #333;\">".$title."</h3>";
 
@@ -40,12 +39,13 @@
 		$message .= "</div>";
 
 		if( $sendTelegram ){
-			$messaggio = "Заявка на публикацию о банкротстве\n";
 
 			if( $_SESSION["type"] == "card" ){
-				$messaggio .= "<b>Оплачено картой</b>\n";				
+				$messaggio = "<b>Оплачено картой</b>\n";				
+			}else if($_SESSION["type"] == "account"){
+				$messaggio = "<b>Оплата на расчетный счет</b>\n";
 			}else{
-				$messaggio .= "<b>Оплата на расчетный счет</b>\n";
+				$messaggio = $subject."\n";
 			}
 
 			foreach ($fields as $key => $value){

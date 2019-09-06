@@ -195,7 +195,7 @@ $(document).ready(function(){
             $(".b-checkbox-payment input").addClass("error");
             return false;
         }
-        if( $(this).attr("data-goal") && typeof ym != "undefined" ){
+        if( typeof ym != "undefined" ){
             ym(55155955, 'reachGoal', $(this).attr("data-goal"));
         }
         $(this).parents("form").submit();

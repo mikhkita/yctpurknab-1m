@@ -115,7 +115,7 @@ switch ($_REQUEST['type']) {
 		$arFields['phone'] = $_SESSION['phone'];
 		$arFields['email'] = $_SESSION['email'];
 		$arFields['subject'] = "Оплата на расчетный счет";
-		sendMail($deafult, $arFields, true);
+		sendMail($deafult, $arFields, "Поступила заявка на публикацию объявления", true);
 
 		//Письмо клиенту
 		$email_to = $_SESSION['email'];
