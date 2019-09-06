@@ -276,6 +276,12 @@ if( isset($_SESSION["error"]) ){
 				<input id="payment-account" type="radio" name="payment" value="account">
 				<label for="payment-account">Оплата на расчетный счет<small>На ваш e-mail будут отправлены договор <br>и счет на оплату</small></label>
 			</div>
+
+			<div class="b-checkbox b-checkbox-payment">
+				<input id="checkbox-offer-1" class="checkbox-offer" type="checkbox" name="offer" checked>
+				<label for="checkbox-offer-1" class="">Производя оплату вы соглашаетесь <br>с условиями <a href="/offer_m1.docx" target="_blank">оферты</a></label>
+			</div>
+			
 			<div class="b-payment-card">
 				<a href="#" data-action="thanks.php" data-method="GET" class="b-btn b-btn-submit b-payment-card-btn ajax">Оплатить 1 199 руб.</a>
 				<div class="b-offer">Производя оплату вы соглашаетесь с условиями <a href="/offer_m1.docx" target="_blank">оферты</a></div>

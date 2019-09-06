@@ -1696,6 +1696,97 @@ select{
 			left: 3.8rem;
 		}
 
+/* ===== checkbox ===== */
+
+.b-checkbox{
+	padding-left: 0.2rem;
+}
+	.b-checkbox label a{
+		text-decoration: underline;
+	}
+	.b-checkbox label a:hover{
+		text-decoration: none;
+	}
+
+.b-checkbox input[type="checkbox"].error + span + label:before,
+.b-checkbox input[type="checkbox"].error + label:before{
+	border: 0.3rem solid #D8232A;
+}
+
+.b-checkbox input[type="checkbox"],
+.b-checkbox input[type="radio"]{
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	margin-bottom: 0;
+}
+.b-checkbox input[type="checkbox"] + span + label,
+.b-checkbox input[type="checkbox"] + label{
+	position: relative;
+	padding-top: 0.5rem;
+    padding-left: 5rem;
+    min-width: 5rem;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.b-checkbox input[type="checkbox"] + span + label:before,
+.b-checkbox input[type="checkbox"] + label:before{
+	position: absolute;
+	content: "s";
+	font-size: 0px;
+	left: 0px;
+	top: 0.1rem;
+	width: 2.8rem;
+	height: 2.8rem;
+	border: 0.3rem solid #e4e4e4;
+}
+
+.b-checkbox input[type="checkbox"] + span + label:after,
+.b-checkbox input[type="checkbox"] + label:after{
+	content: '';
+	display: none;
+    position: absolute;
+    top: 0.4rem;
+    left: 1.1rem;
+    width: 0.9rem;
+    height: 1.8rem;
+    background-color: transparent;
+    border-bottom: 0.3rem solid #D8232A;
+    border-right: 0.3rem solid #D8232A;
+    z-index: 2;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.b-checkbox input[type="checkbox"]:checked + span + label,
+.b-checkbox input[type="checkbox"]:checked + label{
+
+}
+.b-checkbox input[type="checkbox"]:checked + span + label:before,
+.b-checkbox input[type="checkbox"]:checked + label:before{
+
+}
+.b-checkbox input[type="checkbox"]:checked + span + label:after,
+.b-checkbox input[type="checkbox"]:checked + label:after{
+	border-bottom: 0.3rem solid #D8232A !important;
+    border-right: 0.3rem solid #D8232A !important;
+    display: block;
+}
+
+.b-checkbox input[type="checkbox"] + span + label:hover:after,
+.b-checkbox input[type="checkbox"] + label:hover:after{
+	border-bottom: 0.3rem solid #e4e4e4;
+    border-right: 0.3rem solid #e4e4e4;
+	display: block;
+}
+
 /* ================== mobile ================== */
 
 @media screen and (max-width: 960px){

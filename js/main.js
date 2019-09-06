@@ -184,17 +184,18 @@ $(document).ready(function(){
         return false;
     });
 
-    //Оплата банковской картой
-    $('.b-payment-card-btn').on('click', function(){
-        if( $this.attr("data-goal") && typeof ym != "undefined" ){
-            ym(55155955, 'reachGoal', $(this).attr("data-goal"));
+    // $(".b-checkbox input").on('change', function(){
+    //     if($(this).prop("checked")){
+    //         $(this).removeClass("error");
+    //     }
+    // });
+
+    $('.b-payment-card-btn, .b-payment-account-btn').on('click', function(){
+        if(!$(".b-checkbox-payment input").prop("checked")){ //Проверить чекбокс
+            $(".b-checkbox-payment input").addClass("error");
+            return false;
         }
-        $(this).parents("form").submit();
-        return false;
-    });
-    //Оплата на расчетный счет
-    $('.b-payment-account-btn').on('click', function(){
-        if( $this.attr("data-goal") && typeof ym != "undefined" ){
+        if( $(this).attr("data-goal") && typeof ym != "undefined" ){
             ym(55155955, 'reachGoal', $(this).attr("data-goal"));
         }
         $(this).parents("form").submit();
