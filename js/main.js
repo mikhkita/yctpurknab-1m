@@ -247,6 +247,6 @@ $(document).ready(function(){
 	//     position: myPlace,
 	//     map: map,
 	//     title: "Ярмарка вакансий и стажировок"
-	// });
+	// }); 
 
 });
