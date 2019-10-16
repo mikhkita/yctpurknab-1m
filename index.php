@@ -316,8 +316,8 @@
 			</div>
 
 			<div class="b-checkbox b-checkbox-payment">
-				<input id="checkbox-offer-1" class="checkbox-offer" type="checkbox" name="offer" checked>
-				<label for="checkbox-offer-1" class="">Производя оплату вы соглашаетесь <br>с условиями <a href="/offer_m1.docx" target="_blank">оферты</a></label>
+				<input id="checkbox-offer-1" class="checkbox-offer" type="checkbox" name="offer">
+				<label for="checkbox-offer-1" class="">Подтверждаю, что я ознакомлен и согласен с <a href="/offer_m1.docx" target="_blank">условиями оферты</a></label>
 			</div>
 
 			<div class="b-payment-card">
