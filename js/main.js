@@ -202,6 +202,38 @@ $(document).ready(function(){
         return false;
     });
 
+    $('input[name="creditorINN"], input[name="INN"]').on('change', function(){
+        var $this = $(this);
+        if($(this).val()){
+            $.ajax({
+                type: 'get',
+                url: '/send/nameINN.php',
+                data: { 'INN': $(this).val() },
+                success: function(msg){
+                    var json = JSON.parse(msg);
+                    if(json.success){
+                        $this.siblings(".company-name").text(json.data);
+                        $this.siblings(".company-name-input").val(json.data);
+                    }else{
+                        $this.siblings(".company-name").text("");
+                        $this.siblings(".company-name-input").val("Ошибка соединения с сервером. Не удалось получить название организации");
+                        console.log(json.data);
+                    }
+                },
+                error: function(){
+                    $this.siblings(".company-name").text("");
+                    $this.siblings(".company-name-input").val("Ошибка соединения с сервером. Не удалось получить название организации");
+                },
+                complete: function(){
+
+                }
+            });
+        }else{
+            $this.siblings(".company-name").text("");
+            $this.siblings(".company-name-input").val("");
+        }
+    });
+
     // $(".b-step-slider").slick({
     //     dots: true,
     //     slidesToShow: 1,

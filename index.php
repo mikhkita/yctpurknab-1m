@@ -270,6 +270,8 @@
 				<div class="b-input b-input-creditor" style="display: none;">
 					<input type="text" name="creditorINN" disabled="">
 					<label>ИНН кредитора <b class="required">*</b></label>
+					<p class="company-name"></p>
+					<input type="hidden" name="creditorNameCompany" class="company-name-input" disabled="">
 				</div>
 				<div class="b-select">
 					<select name="debtor" class="select-chosen">
@@ -286,6 +288,8 @@
 				<div class="b-input b-input-INN" style="display: none;">
 					<input type="text" name="INN" disabled="">
 					<label>ИНН должника <b class="required">*</b></label>
+					<p class="company-name"></p>
+					<input type="hidden" name="debtorNameCompany" class="company-name-input" disabled="">
 				</div>
 				<div class="b-input">
 					<input type="tel" pattern="[0-9]*" name="phone" required="">

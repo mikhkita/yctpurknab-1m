@@ -89,9 +89,11 @@ switch ($_REQUEST['type']) {
 			'price'		=> 'Сумма',
 			'applicant' => 'Заявитель является',
 			'creditorINN' => 'ИНН кредитора',
+			'creditorNameCompany' => 'Название организации кредитора',
 			'debtor' 	=> 'Должник является',
 			'name' 		=> 'Имя',
 			'INN' 		=> 'ИНН',
+			'debtorNameCompany' => 'Название организации должника',
 			'phone' 	=> 'Телефон',
 			'email' 	=> 'E-mail'
 		);
@@ -102,6 +104,7 @@ switch ($_REQUEST['type']) {
 		$arFields['applicant'] = $_SESSION['applicant'];
 		if( !empty($_SESSION['creditorINN']) ){
 			$arFields['creditorINN'] = $_SESSION['creditorINN'];
+			$arFields['creditorNameCompany'] = $_SESSION["creditorNameCompany"];
 		}
 		$arFields['debtor'] = $_SESSION['debtor'];
 
@@ -110,6 +113,7 @@ switch ($_REQUEST['type']) {
 		}
 		if( !empty($_SESSION['INN']) ){
 			$arFields['INN'] = $_SESSION['INN'];
+			$arFields['debtorNameCompany'] = $_SESSION["debtorNameCompany"];
 		}
 
 		$arFields['phone'] = $_SESSION['phone'];

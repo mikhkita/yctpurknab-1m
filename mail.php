@@ -40,12 +40,17 @@
 
 		if( $sendTelegram ){
 
+			$messaggio = "";
+			if($_SESSION['id']){
+				$messaggio .= "Заявка №".$_SESSION['id']."\n";
+			}
+
 			if( $_SESSION["type"] == "card" ){
-				$messaggio = "<b>Оплачено картой</b>\n";				
+				$messaggio .= "<b>Оплачено картой</b>\n";				
 			}else if($_SESSION["type"] == "account"){
-				$messaggio = "<b>Оплата на расчетный счет</b>\n";
+				$messaggio .= "<b>Оплата на расчетный счет</b>\n";
 			}else{
-				$messaggio = $subject."\n";
+				$messaggio .= $subject."\n";
 			}
 
 			foreach ($fields as $key => $value){

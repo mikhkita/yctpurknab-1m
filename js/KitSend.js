@@ -295,6 +295,8 @@ $(document).ready(function(){
 				complete: function(){
 					$this.find(".ajax").removeAttr("onclick");
 					$this.find("input[type=text],textarea").val("").parent().removeClass("focus not-empty");
+					$this.find(".company-name").text("");
+                    $this.find(".company-name-input").val("");
 				}
 			});
   		}else{

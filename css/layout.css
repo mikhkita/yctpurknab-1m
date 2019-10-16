@@ -1628,8 +1628,8 @@ input[type=search]{
 	}
 	.b-input > label{
 	    position: absolute;
-	    top: calc(50% - 1.6rem);
-	    left: 3.5rem;
+	    top: 2.5rem;
+	    left: 4rem;
 	    font-size: 2rem;
 	    line-height: 3.2rem;
 	    color: #c4c4c4;
@@ -1843,6 +1843,7 @@ select{
 		line-height: 1.6rem;
 	}
 	.b-input > label{
+		top: 1.9rem;
 		left: 2.8rem
 	}
 	.b-select.no-chosen .note {
