@@ -35,6 +35,9 @@
 		foreach ($fields as $key => $value){
 			$message .= "<div><p><b>".$key.": </b>".$value."</p></div>";
 		}
+
+		$message .= "<div><p><b>Источник: </b>".$_SESSION["source"]."</p></div>";
+		$message .= "<div><p><b>Ключевая фраза: </b>".$_SESSION["keyWord"]."</p></div>";
 			
 		$message .= "</div>";
 
@@ -60,6 +63,10 @@
 					$messaggio .= $key.": ".$value."\n";
 				}
 			}
+
+			$messaggio .= "Источник: ".$_SESSION["source"]."\n";
+			$messaggio .= "Ключевая фраза: ".$_SESSION["keyWord"]."\n";
+
 			sendTelegram($messaggio);
 		}
 

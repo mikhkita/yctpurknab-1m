@@ -2086,6 +2086,9 @@ select{
 		margin: 2rem 0;
 	}
 
+	.b-popup .company-name{
+		padding: 0.4rem 4.1rem 0 4.1rem;
+	}
 
 .fancybox-slide--html {
     padding: 0;
@@ -2153,7 +2156,10 @@ select{
 	}
 	.b-head-thanks{
 		background-image: none;
-	}	
+	}
+	.b-popup .company-name{
+		padding: 0.4rem 3.7rem 0 3.7rem;
+	}
 }
 
 @media screen and (max-width: 540px){
@@ -2192,6 +2198,12 @@ select{
 	}
 	.b-popup .b-offer {
 	    padding-top: 0;
+	}
+
+	.b-popup .company-name{
+		font-size: 2rem;
+   		line-height: 2.8rem;
+		padding: 0.8rem 2.7rem 0 2.7rem;
 	}
 
 	.fancybox-button--close {
